@@ -1,0 +1,510 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Canalizador em Tavira | Reparações Rápidas & Preços Claros | Karpov";
+const pageDescription = "Precisa de um canalizador em Tavira ou arredores? Reparação de autoclismos, torneiras, termoacumuladores e desentupimentos. Pontualidade, preços fechados e fatura com NIF.";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto cobram pela deslocação em Tavira?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para intervenções realizadas no concelho de Tavira, a deslocação está incluída no orçamento global acordado antes do trabalho. Em caso de visita apenas para diagnóstico sem execução do serviço, a taxa é de 25€."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Passam fatura com NIF para o IRS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, todas as intervenções têm emissão de fatura-recibo legal comunicada à Autoridade Tributária com o seu NIF, o que permite dedução de despesas no IRS e confere garantia por escrito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Falam inglês com os clientes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, prestamos atendimento fluente em Português e Inglês (We speak fluent English), facilitando a comunicação com a comunidade residente e estrangeira em Tavira e no Algarve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Com que rapidez conseguem atender um pedido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para serviços normais e reparações comuns, agendamos com hora marcada habitualmente no próprio dia ou no dia útil seguinte."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} schema={faqSchema}>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-blue-50/60 via-white to-slate-50 pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <!-- Local Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/80 text-blue-800 text-xs sm:text-sm font-semibold mb-6 border border-blue-200">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+            Tavira, Cabanas, Santa Luzia e arredores (até 40 km)
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+            Canalizador em Tavira: <br class="hidden sm:inline" />
+            <span class="text-blue-600">Reparações Rápidas</span>, Preços Transparentes e Pontualidade.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
+            Autoclismo a correr água, torneira a pingar ou termoacumulador sem água quente? 
+            A <strong>Karpov</strong> resolve as avarias mais comuns da sua casa com preço fechado antes de começar, trabalho limpo e fatura oficial com NIF.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <a 
+              href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20orçamento%20em%20Tavira" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 transition active:scale-[0.98]"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/>
+              </svg>
+              Pedir Orçamento via WhatsApp
+            </a>
+
+            <a 
+              href="tel:+351912224291" 
+              class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition"
+            >
+              📞 Ligar: +351 912 22 42 91
+            </a>
+          </div>
+
+          <!-- Trust Checkmarks -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 font-black">✓</span> Preço Fechado
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 font-black">✓</span> Pontualidade Real
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 font-black">✓</span> Fatura com NIF
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 font-black">✓</span> Falamos PT & EN
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVARIAS COMUNS (CLICK-TO-WHATSAPP) -->
+    <section id="avarias" class="py-16 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Apoio Rápido</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Qual é a avaria em sua casa hoje?</h2>
+          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+            Clique no seu problema para abrir diretamente uma conversa no WhatsApp com orçamento estimado e disponibilidade:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Card 1: Autoclismo -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20o%20meu%20autoclismo%20está%20a%20correr%20água/avariado%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                🚽
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Autoclismo a Correr Água</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Água a correr continuamente na sanita, boia que não fecha ou autoclismo que não enche.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 45€</span>
+              <span class="group-hover:translate-x-1 transition">Pedir Reparação →</span>
+            </div>
+          </a>
+
+          <!-- Card 2: Torneira -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20reparar/trocar%20uma%20torneira%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                🚰
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Torneira a Pingar ou Nova</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Substituição de torneira de cozinha ou casa de banho, troca de cartucho e bichas flexíveis.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 40€</span>
+              <span class="group-hover:translate-x-1 transition">Pedir Reparação →</span>
+            </div>
+          </a>
+
+          <!-- Card 3: Termoacumulador -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20o%20meu%20termoacumulador%20não%20aquece/está%20a%20verter%20água"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                ⚡
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Termoacumulador (Cilindro)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Sem água quente, água morna devido ao calcário, fuga na válvula de segurança ou montagem de novo.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 95€</span>
+              <span class="group-hover:translate-x-1 transition">Pedir Assistência →</span>
+            </div>
+          </a>
+
+          <!-- Card 4: Desentupimento simples -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20tenho%20um%20cano/ralo/lava-loiça%20entupido%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                🥣
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Sifão e Lava-Loiça Entupido</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Água que não escoa na pia ou base de duche, maus cheiros na canalização e limpeza mecânica de sifões.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 50€</span>
+              <span class="group-hover:translate-x-1 transition">Desentupir Agora →</span>
+            </div>
+          </a>
+
+          <!-- Card 5: Máquinas de lavar -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20ligar%20uma%20máquina%20de%20lavar%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                🧼
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Ligação de Eletrodomésticos</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Instalação hidráulica segura de máquinas de lavar roupa ou loiça com torneira de segurança e esgoto.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 35€</span>
+              <span class="group-hover:translate-x-1 transition">Agendar Instalação →</span>
+            </div>
+          </a>
+
+          <!-- Card 6: Filtros Calcário -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20quero%20instalar%20um%20filtro%20anticalcário%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                ⚪
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Filtro Anticalcário (Água Dura)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Instalação de filtro de polifosfatos para proteger o termoacumulador da água dura do Algarve.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
+              <span>A partir de 65€</span>
+              <span class="group-hover:translate-x-1 transition">Proteger Aparelhos →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREÇOS TRANSPARENTES -->
+    <section id="precos" class="py-16 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Transparência Total</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Preços de Referência Sem Surpresas</h2>
+          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+            O valor que combinamos antes de começar é exatamente o valor que paga. Sem taxas escondidas no final.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="divide-y divide-slate-100">
+            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Reparação de Autoclismo (Sanita)</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Mecanismo de descarga, substituição de boia ou vedante de borracha</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="font-extrabold text-blue-600 text-lg">A partir de 45€</span>
+                <p class="text-[11px] text-slate-400">~45–60 min</p>
+              </div>
+            </div>
+
+            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Substituição de Torneira ou Misturadora</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Lava-loiça, lavatório ou base de duche, com bichas flexíveis novas</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="font-extrabold text-blue-600 text-lg">A partir de 40€</span>
+                <p class="text-[11px] text-slate-400">~45 min</p>
+              </div>
+            </div>
+
+            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Montagem de Termoacumulador Elétrico</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Desmontagem do antigo, fixação reforçada, ligação hidráulica e teste</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="font-extrabold text-blue-600 text-lg">A partir de 95€</span>
+                <p class="text-[11px] text-slate-400">~1h30 – 2h</p>
+              </div>
+            </div>
+
+            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Desentupimento Simples de Sifão / Ralo</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Desobstrução e higienização mecânica de lava-loiças, lavatórios ou duches</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="font-extrabold text-blue-600 text-lg">A partir de 50€</span>
+                <p class="text-[11px] text-slate-400">~45 min</p>
+              </div>
+            </div>
+
+            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Instalação de Filtro Anticalcário</h4>
+                <p class="text-xs sm:text-sm text-slate-500">Proteção de polifosfatos para cilindro ou entrada de eletrodomésticos</p>
+              </div>
+              <div class="text-left sm:text-right">
+                <span class="font-extrabold text-blue-600 text-lg">A partir de 65€</span>
+                <p class="text-[11px] text-slate-400">~1 hora</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-slate-100/70 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>Valores de mão de obra de referência. Materiais faturados à parte com comprovativo.</span>
+            <span class="font-semibold text-slate-700">Fatura oficial com NIF incluída</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORQUÊ NÓS (DIFERENCIAIS) -->
+    <section id="sobre" class="py-16 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Compromisso Karpov</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Por que confiar na nossa equipa?</h2>
+          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+            Sabemos que chamar um técnico a casa muitas vezes gera desconfiança. Eliminámos todos os problemas habituais:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg mb-4">
+              ⏰
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Pontualidade Rigorosa</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Respeitamos o seu tempo. Se marcamos para as 10:00, estamos lá às 10:00. Se houver trânsito inesperado, enviamos mensagem 30 minutos antes.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg mb-4">
+              💶
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Zero Surpresas na Conta</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Diagnosticamos o problema, explicamos as opções e confirmamos o valor exato consigo antes de pegar em qualquer ferramenta.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg mb-4">
+              🧹
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Trabalho Limpo e Cuidado</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Usamos proteções para calçado, panos de proteção e deixamos o espaço impecavelmente limpo, levando as peças velhas para reciclagem.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-4">
+              📄
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Fatura Legal com NIF</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Todas as intervenções têm fatura oficial para poder deduzir no IRS e ter garantia formal do serviço prestado.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg mb-4">
+              🧰
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Peças na Carrinha</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Transportamos connosco as peças de substituição mais habituais (boias, válvulas, bichas, juntas) para resolver no próprio dia.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg mb-4">
+              🗣️
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Português e Inglês</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Falamos português e inglês fluentemente. Muitos dos nossos clientes são residentes estrangeiros e garantimos comunicação técnica clara.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONAS DE ATUAÇÃO -->
+    <section id="zonas" class="py-16 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Geografia de Intervenção</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Onde Atuamos a Partir de Tavira</h2>
+          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+            Com base em Tavira, cobrimos com rapidez todo o concelho e as localidades vizinhas num raio de 30 a 40 km:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-center text-sm font-semibold text-slate-700">
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Tavira Centro</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Santa Luzia</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Cabanas de Tavira</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Conceição</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Luz de Tavira</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Santo Estêvão</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Olhão & Fuseta</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Faro & Montenegro</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 VRSA & Monte Gordo</div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 São Brás de Alportel</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-white border-b border-slate-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Dúvidas Frequentes</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-base text-slate-900">Cobram taxa de deslocação em Tavira?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Para reparações efetuadas por nós em Tavira e freguesias próximas, a deslocação está incluída no orçamento acordado antes da intervenção. Caso pretenda apenas uma visita técnica para diagnóstico sem avançar com o trabalho, cobramos uma taxa fixa de 25€.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-base text-slate-900">Passam fatura com NIF para o IRS?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Sim, obrigatoriamente. Emitimos fatura-recibo com o seu NIF comunicada à Autoridade Tributária. Isso confere-lhe garantia formal de mão de obra e dedução nas despesas de manutenção da habitação.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-base text-slate-900">Do you speak English? (Falam inglês?)</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Sim, fluente! We speak English fluently. Uma grande percentagem dos nossos clientes em Tavira, Cabanas e Santa Luzia são residentes estrangeiros. Garantimos comunicação clara e sem mal-entendidos técnicos.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-base text-slate-900">Quais as formas de pagamento disponíveis?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Aceitamos MBWay, transferência bancária imediata ou dinheiro logo após a conclusão e teste de funcionamento do trabalho.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
+          Tem uma fuga ou avaria em Tavira?
+        </h2>
+        <p class="text-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+          Envie-nos uma mensagem no WhatsApp com foto ou descrição. Respondemos em poucos minutos com orçamento e disponibilidade.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-base shadow-lg transition active:scale-95"
+          >
+            Falar no WhatsApp Agora
+          </a>
+          <a 
+            href="tel:+351912224291"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition"
+          >
+            Ligar: +351 912 22 42 91
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
