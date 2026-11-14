@@ -2,6 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { 
+  Toilet, 
+  ShowerHead, 
+  Flame, 
+  Waves, 
+  WashingMachine, 
+  ShieldCheck, 
+  Clock, 
+  Receipt, 
+  Sparkles, 
+  FileText, 
+  Wrench, 
+  Languages, 
+  MapPin, 
+  Check 
+} from 'lucide-react';
 
 const pageTitle = "Canalizador em Tavira | Reparações Rápidas & Preços Claros | Karpov";
 const pageDescription = "Precisa de um canalizador em Tavira ou arredores? Reparação de autoclismos, torneiras, termoacumuladores e desentupimentos. Pontualidade, preços fechados e fatura com NIF.";
@@ -97,16 +113,20 @@ const faqSchema = {
           <!-- Trust Checkmarks -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700">
             <div class="flex items-center gap-2">
-              <span class="text-emerald-600 font-black">✓</span> Preço Fechado
+              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+              <span>Preço Fechado</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="text-emerald-600 font-black">✓</span> Pontualidade Real
+              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+              <span>Pontualidade Real</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="text-emerald-600 font-black">✓</span> Fatura com NIF
+              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+              <span>Fatura com NIF</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="text-emerald-600 font-black">✓</span> Falamos PT & EN
+              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+              <span>Falamos PT & EN</span>
             </div>
           </div>
         </div>
@@ -133,8 +153,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                🚽
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <Toilet className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Autoclismo a Correr Água</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -155,8 +175,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                🚰
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <ShowerHead className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Torneira a Pingar ou Nova</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -177,8 +197,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                ⚡
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <Flame className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Termoacumulador (Cilindro)</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -199,8 +219,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                🥣
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <Waves className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Sifão e Lava-Loiça Entupido</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -221,8 +241,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                🧼
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <WashingMachine className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Ligação de Eletrodomésticos</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -243,8 +263,8 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
-                ⚪
+              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Filtro Anticalcário (Água Dura)</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -349,8 +369,8 @@ const faqSchema = {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg mb-4">
-              ⏰
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <Clock className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Pontualidade Rigorosa</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -359,8 +379,8 @@ const faqSchema = {
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg mb-4">
-              💶
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <Receipt className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Zero Surpresas na Conta</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -369,8 +389,8 @@ const faqSchema = {
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg mb-4">
-              🧹
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <Sparkles className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Trabalho Limpo e Cuidado</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -379,8 +399,8 @@ const faqSchema = {
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-4">
-              📄
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <FileText className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Fatura Legal com NIF</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -389,8 +409,8 @@ const faqSchema = {
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg mb-4">
-              🧰
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <Wrench className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Peças na Carrinha</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -399,8 +419,8 @@ const faqSchema = {
           </div>
 
           <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg mb-4">
-              🗣️
+            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+              <Languages className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Português e Inglês</h3>
             <p class="text-slate-600 text-sm mt-2 leading-relaxed">
@@ -422,17 +442,47 @@ const faqSchema = {
           </p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-center text-sm font-semibold text-slate-700">
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Tavira Centro</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Santa Luzia</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Cabanas de Tavira</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Conceição</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Luz de Tavira</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Santo Estêvão</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Olhão & Fuseta</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 Faro & Montenegro</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 VRSA & Monte Gordo</div>
-          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">📍 São Brás de Alportel</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-sm font-semibold text-slate-700">
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Tavira Centro</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Santa Luzia</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Cabanas de Tavira</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Conceição</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Luz de Tavira</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Santo Estêvão</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Olhão & Fuseta</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Faro & Montenegro</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>VRSA & Monte Gordo</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>São Brás de Alportel</span>
+          </div>
         </div>
       </div>
     </section>
