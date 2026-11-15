@@ -6,12 +6,17 @@
     <!-- Brand -->
     <a href="/" class="group flex items-center gap-2.5">
       <div>
-        <div class="flex items-center gap-1.5">
-          <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">KARPOV</span>
-          <!-- Subtle water droplet accent -->
-          <svg class="w-3.5 h-3.5 text-blue-600 group-hover:text-sky-500 group-hover:-translate-y-0.5 transition-all duration-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-          </svg>
+        <div class="brand-word font-display font-extrabold text-2xl tracking-tight text-slate-900 flex items-baseline" aria-label="Karpov">
+          <span aria-hidden="true">KARP</span><span class="brand-drop" aria-hidden="true"><svg viewBox="0 0 24 30" fill="none">
+              <defs>
+                <linearGradient id="dropGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#38bdf8" />
+                  <stop offset="1" stop-color="#2563eb" />
+                </linearGradient>
+              </defs>
+              <path class="brand-drop-body" d="M12 1.5C12 1.5 3 12.2 3 19.2a9 9 0 0 0 18 0C21 12.2 12 1.5 12 1.5Z" fill="url(#dropGrad)" />
+              <path class="brand-drop-shine" d="M7.6 19.4a4.6 4.6 0 0 0 3.4 4.4" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" />
+            </svg></span><span aria-hidden="true">V</span>
         </div>
         <p class="text-[10.5px] text-slate-500 font-semibold tracking-[0.14em] uppercase">Canalização</p>
       </div>

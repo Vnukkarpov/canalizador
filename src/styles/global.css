@@ -156,3 +156,62 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.12);
 }
+
+/* Living water drop replacing the "O" in the KARPOV wordmark */
+.brand-drop {
+  display: inline-block;
+  height: 0.98em;
+  width: 0.78em;
+  margin: 0 0.04em;
+  transform-origin: 50% 100%;
+  animation: drop-breathe 3.6s ease-in-out infinite;
+  filter: drop-shadow(0 2px 3px rgba(37, 99, 235, 0.25));
+}
+
+.brand-drop svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.brand-drop-body {
+  transform-origin: 50% 70%;
+  animation: drop-wobble 5.2s ease-in-out infinite;
+}
+
+.brand-drop-shine {
+  animation: drop-shine 3.6s ease-in-out infinite;
+}
+
+/* Soft squash & stretch, like a drop about to fall */
+@keyframes drop-breathe {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  30% { transform: translateY(-1.5px) scale(0.96, 1.05); }
+  55% { transform: translateY(0) scale(1.05, 0.95); }
+  75% { transform: translateY(0) scale(0.99, 1.01); }
+}
+
+/* Slight liquid wobble of the body */
+@keyframes drop-wobble {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(2.5deg) scale(1.02, 0.99); }
+  75% { transform: rotate(-2.5deg) scale(0.99, 1.02); }
+}
+
+@keyframes drop-shine {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.95; }
+}
+
+.group:hover .brand-drop {
+  animation-duration: 1.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-drop,
+  .brand-drop-body,
+  .brand-drop-shine {
+    animation: none;
+  }
+}

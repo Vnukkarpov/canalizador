@@ -8,7 +8,12 @@ import { MapPin, Clock, ShieldCheck } from 'lucide-react';
       <!-- Col 1: Brand & Bio -->
       <div class="md:col-span-1">
         <div class="mb-4">
-          <span class="font-extrabold text-2xl tracking-tight text-white">KARPOV</span>
+          <div class="brand-word font-display font-extrabold text-2xl tracking-tight text-white flex items-baseline" aria-label="Karpov">
+            <span aria-hidden="true">KARP</span><span class="brand-drop" aria-hidden="true"><svg viewBox="0 0 24 30" fill="none">
+                <path class="brand-drop-body" d="M12 1.5C12 1.5 3 12.2 3 19.2a9 9 0 0 0 18 0C21 12.2 12 1.5 12 1.5Z" fill="url(#dropGrad)" />
+                <path class="brand-drop-shine" d="M7.6 19.4a4.6 4.6 0 0 0 3.4 4.4" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" />
+              </svg></span><span aria-hidden="true">V</span>
+          </div>
           <p class="text-[11px] text-slate-400 font-medium tracking-wider uppercase">Canalização</p>
         </div>
         <p class="text-sm text-slate-400 mb-4 leading-relaxed">
