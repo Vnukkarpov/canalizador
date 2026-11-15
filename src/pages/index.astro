@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 
 const pageTitle = "Canalizador em Tavira | Reparações Rápidas & Preços Claros | Karpov";
-const pageDescription = "Precisa de um canalizador em Tavira ou arredores? Reparação de autoclismos, torneiras, termoacumuladores e desentupimentos. Pontualidade, preços fechados e fatura com NIF.";
+const pageDescription = "Precisa de um canalizador em Tavira ou arredores? Reparação de autoclismos, torneiras, sanitas, móveis de WC, termoacumuladores e desentupimentos. Preços fechados e fatura com NIF.";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -71,34 +71,41 @@ const faqSchema = {
 
   <main class="flex-grow">
     <!-- HERO SECTION -->
-    <section class="relative bg-gradient-to-b from-blue-50/60 via-white to-slate-50 pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <section class="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white pt-14 pb-24 md:pt-24 md:pb-32">
+      <!-- Subtle Ambient Water Glow Orbs -->
+      <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-200/35 blur-3xl"></div>
+      <div class="pointer-events-none absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-blue-200/25 blur-3xl"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-3xl">
-          <!-- Local Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 text-blue-800 text-xs sm:text-sm font-semibold mb-6 border border-blue-200">
-            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+          <!-- Local Badge with Water Ripple Pulse -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-xs text-blue-800 text-xs sm:text-sm font-semibold mb-7 border border-blue-200/80 shadow-2xs">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+            </span>
             Tavira e em toda a zona de Faro a Vila Real de Santo António
           </div>
 
           <!-- Main Title -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+          <h1 class="text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6">
             Canalizador em Tavira: <br class="hidden sm:inline" />
-            <span class="text-blue-600">Reparações Rápidas</span>, Preços Transparentes e Pontualidade.
+            <span class="bg-gradient-to-r from-blue-600 via-blue-700 to-sky-500 bg-clip-text text-transparent">Reparações Rápidas</span>, Preços Transparentes e Pontualidade.
           </h1>
 
           <!-- Subtitle -->
-          <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
-            Autoclismo a correr água, torneira a pingar ou termoacumulador sem água quente? 
-            A <strong>Karpov</strong> resolve as avarias mais comuns da sua casa com preço fechado antes de começar, trabalho limpo e fatura oficial com NIF.
+          <p class="text-lg sm:text-xl text-slate-600 mb-9 leading-relaxed max-w-2xl">
+            Autoclismo a correr água, torneira a pingar, substituição de sanita ou termoacumulador? 
+            A <strong class="text-slate-800 font-semibold">Karpov</strong> resolve as avarias e instalações da sua casa com preço fechado antes de começar, trabalho limpo e fatura oficial com NIF.
           </p>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
             <a 
               href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20orçamento%20em%20Tavira" 
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 transition active:scale-[0.98]"
+              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 hover:shadow-xl hover:shadow-emerald-600/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]"
             >
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/>
@@ -108,72 +115,90 @@ const faqSchema = {
 
             <a 
               href="#servicos" 
-              class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition"
+              class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-blue-50/40 text-slate-800 hover:text-blue-700 font-bold text-base border border-slate-300 hover:border-blue-300 shadow-xs hover:-translate-y-0.5 transition-all duration-200"
             >
               Ver Serviços e Preços ↓
             </a>
           </div>
 
-          <!-- Trust Checkmarks -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200/80 text-xs sm:text-sm font-semibold text-slate-700">
-            <div class="flex items-center gap-2">
-              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+          <!-- Trust Checkmarks (Glass Pills) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
               <span>Preço Fechado</span>
             </div>
-            <div class="flex items-center gap-2">
-              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
               <span>Pontualidade Real</span>
             </div>
-            <div class="flex items-center gap-2">
-              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
               <span>Fatura com NIF</span>
             </div>
-            <div class="flex items-center gap-2">
-              <Check className="w-4 h-4 text-blue-600 stroke-[2.5]" />
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
               <span>Falamos PT & EN</span>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Subtle Water Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+        <svg class="relative block w-full h-8 sm:h-12 text-white" viewBox="0 0 1440 72" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C320,76 640,-8 960,32 C1200,62 1360,24 1440,12 L1440,72 L0,72 Z" fill="rgba(224, 242, 254, 0.5)" />
+          <path d="M0,48 C360,8 720,72 1080,32 C1260,12 1380,28 1440,40 L1440,72 L0,72 Z" fill="currentColor" />
+        </svg>
+      </div>
     </section>
 
     <!-- SERVIÇOS & PREÇOS TRANSPARENTES (CLICK-TO-WHATSAPP) -->
-    <section id="servicos" class="py-16 bg-white border-b border-slate-200">
+    <section id="servicos" class="py-20 md:py-26 bg-white border-b border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Serviços & Preços Claros</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Do que precisa em sua casa hoje?</h2>
-          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Serviços & Preços Claros
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Do que precisa em sua casa hoje?</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
             Preços de referência transparentes e sem surpresas. Clique no serviço desejado para abrir diretamente o WhatsApp com orçamento e disponibilidade:
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Card 1: Autoclismo -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20o%20meu%20autoclismo%20está%20a%20correr%20água/avariado%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Toilet className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45–60 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45–60 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Reparação de Autoclismo</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Reparação de Autoclismo</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Água a correr continuamente na sanita, boia que não fecha, botão de descarga avariado ou autoclismo que não enche.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 45€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 45€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -184,26 +209,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20reparar/trocar%20uma%20torneira%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Droplets className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Torneira a Pingar ou Nova</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Torneira a Pingar ou Nova</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Substituição de torneira de lava-loiça, lavatório ou bidé, troca de cartucho cerâmico e bichas flexíveis novas.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 40€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 40€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -214,26 +239,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20substituir%20uma%20misturadora%20de%20duche/banheira%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <ShowerHead className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45–60 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45–60 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Misturadora de Duche / Banheira</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Misturadora de Duche / Banheira</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Troca de torneira misturadora ou termostática de duche, instalação de coluna de duche, rampa, bicha e chuveiro.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 45€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 45€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -244,26 +269,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20substituir/instalar%20uma%20sanita%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Bath className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Substituição de Sanita Completa</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Substituição de Sanita Completa</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Desmontagem da sanita antiga, instalação de sanita nova com autoclismo e tampo, ligação ao esgoto e vedação em silicone.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 75€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 75€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -274,26 +299,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20instalar%20um%20móvel%20de%20casa%20de%20banho%20com%20lavatório%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Columns2 className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30 – 2h</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30 – 2h</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Móvel de Casa de Banho (Lavatório)</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Móvel de Casa de Banho (Lavatório)</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Montagem e fixação de móvel suspenso ou de pousar, instalação do lavatório, torneira, válvula de escoamento e sifão.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 75€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 75€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -304,26 +329,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20instalar%20um%20espelho%20de%20casa%20de%20banho%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Lightbulb className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~30–45 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~30–45 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Espelho ou Armário de WC</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Espelho ou Armário de WC</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Furação limpa em azulejo sem partir, fixação nivelada de espelho simples, armário de parede ou espelho com iluminação LED.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 35€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 35€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -334,26 +359,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20o%20meu%20termoacumulador%20não%20aquece/está%20a%20verter%20água"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Flame className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30 – 2h</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30 – 2h</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Termoacumulador (Cilindro)</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Termoacumulador (Cilindro)</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Substituição e montagem de cilindro novo, falta de água quente, limpeza de calcário ou troca de válvula de segurança.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 95€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 95€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -364,26 +389,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20tenho%20um%20cano/ralo/lava-loiça%20entupido%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <Waves className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Sifão e Lava-Loiça Entupido</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Sifão e Lava-Loiça Entupido</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Água que não escoa na pia ou base de duche, maus cheiros na canalização, substituição e limpeza mecânica de sifões.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 50€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 50€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -394,26 +419,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20ligar%20uma%20máquina%20de%20lavar%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <WashingMachine className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~30–45 min</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~30–45 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Ligação de Eletrodomésticos</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Ligação de Eletrodomésticos</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Instalação hidráulica segura de máquinas de lavar roupa ou loiça com torneira de segurança, esgoto e nivelamento.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 35€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 35€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -424,26 +449,26 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20quero%20instalar%20um%20filtro%20anticalcário%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
           >
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
                   <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1 hora</span>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1 hora</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Filtro Anticalcário (Água Dura)</h3>
-              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Filtro Anticalcário (Água Dura)</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
                 Instalação de filtro de polifosfatos para proteger o termoacumulador e as máquinas da água calcária do Algarve.
               </p>
             </div>
-            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
               <div>
-                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
-                <span class="font-extrabold text-base text-blue-600">A partir de 65€</span>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-display font-extrabold text-base text-blue-600">A partir de 65€</span>
               </div>
-              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
                 Pedir no WhatsApp →
               </span>
             </div>
@@ -454,21 +479,25 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20orçamento%20para%20um%20serviço%20em%20Tavira.%20Posso%20enviar%20foto?"
             target="_blank"
             rel="noopener noreferrer"
-            class="group p-6 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 text-white border border-blue-700 transition-all shadow-sm hover:shadow-lg sm:col-span-2 lg:col-span-2 flex flex-col justify-between"
+            class="relative overflow-hidden group p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 text-white border border-blue-600/80 transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-blue-900/20 hover:-translate-y-1 sm:col-span-2 lg:col-span-2 flex flex-col justify-between"
           >
-            <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-blue-50 text-xs font-semibold mb-4">
+            <!-- Decorative Water Rings in Corner -->
+            <div class="pointer-events-none absolute -right-16 -bottom-16 w-64 h-64 rounded-full border border-sky-300/15 group-hover:scale-110 transition-transform duration-500"></div>
+            <div class="pointer-events-none absolute -right-8 -bottom-8 w-44 h-44 rounded-full border border-sky-300/20 group-hover:scale-105 transition-transform duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-xs text-sky-100 text-xs font-semibold mb-4">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 Orçamento Rápido por Foto
               </div>
               <h3 class="font-extrabold text-xl sm:text-2xl text-white">Precisa de outra reparação ou de vários serviços na mesma visita?</h3>
-              <p class="text-blue-100 text-sm sm:text-base mt-2 leading-relaxed max-w-xl">
+              <p class="text-blue-100/90 text-sm sm:text-base mt-2.5 leading-relaxed max-w-xl">
                 Envie-nos uma fotografia ou pequeno vídeo pelo WhatsApp. Damos-lhe um orçamento fechado antes de deslocar e fazemos desconto ao juntar 2 ou mais instalações na mesma deslocação.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <span class="text-xs sm:text-sm text-blue-100 font-medium">Resposta rápida • Sem compromisso</span>
-              <span class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 group-hover:bg-emerald-400 text-white font-bold text-xs sm:text-sm transition">
+            <div class="relative z-10 mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span class="text-xs sm:text-sm text-sky-100/90 font-medium">Resposta rápida • Sem compromisso</span>
+              <span class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 group-hover:bg-emerald-400 text-white font-bold text-xs sm:text-sm shadow-sm transition-all">
                 Enviar Foto no WhatsApp →
               </span>
             </div>
@@ -476,11 +505,11 @@ const faqSchema = {
         </div>
 
         <!-- Nota de Transparência -->
-        <div class="mt-8 p-4 sm:px-6 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+        <div class="mt-10 p-4 sm:px-6 rounded-2xl bg-slate-50 border border-slate-200/90 text-xs sm:text-sm text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
           <span>
             <strong class="text-slate-800">Preço fechado sem surpresas:</strong> o valor acordado antes de iniciar é exatamente o que paga. Materiais faturados à parte com comprovativo.
           </span>
-          <span class="font-bold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full whitespace-nowrap">
+          <span class="font-bold text-blue-700 bg-blue-50 border border-blue-200/80 px-3.5 py-1.5 rounded-full whitespace-nowrap">
             Fatura oficial com NIF incluída
           </span>
         </div>
@@ -488,19 +517,21 @@ const faqSchema = {
     </section>
 
     <!-- PORQUÊ NÓS (DIFERENCIAIS) -->
-    <section id="sobre" class="py-16 bg-white border-b border-slate-200">
+    <section id="sobre" class="py-20 md:py-24 bg-slate-50/80 border-b border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Compromisso Karpov</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Por que confiar na nossa equipa?</h2>
-          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Compromisso Karpov
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Por que confiar na nossa equipa?</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
             Sabemos que chamar um técnico a casa muitas vezes gera desconfiança. Eliminámos todos os problemas habituais:
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <Clock className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Pontualidade Rigorosa</h3>
@@ -509,8 +540,8 @@ const faqSchema = {
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <Receipt className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Zero Surpresas na Conta</h3>
@@ -519,8 +550,8 @@ const faqSchema = {
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <Sparkles className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Trabalho Limpo e Cuidado</h3>
@@ -529,8 +560,8 @@ const faqSchema = {
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <FileText className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Fatura Legal com NIF</h3>
@@ -539,8 +570,8 @@ const faqSchema = {
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <Wrench className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Peças na Carrinha</h3>
@@ -549,8 +580,8 @@ const faqSchema = {
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-blue-600 shadow-xs flex items-center justify-center mb-4">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
               <Languages className="w-5 h-5 stroke-[1.8]" />
             </div>
             <h3 class="font-bold text-lg text-slate-900">Português e Inglês</h3>
@@ -563,54 +594,56 @@ const faqSchema = {
     </section>
 
     <!-- ZONAS DE ATUAÇÃO -->
-    <section id="zonas" class="py-16 bg-slate-50 border-b border-slate-200">
+    <section id="zonas" class="py-20 md:py-24 bg-white border-b border-slate-200/80">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-3xl mx-auto text-center mb-10">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Geografia de Intervenção</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Onde Atuamos a Partir de Tavira</h2>
-          <p class="text-slate-600 mt-3 text-sm sm:text-base">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Geografia de Intervenção
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Onde Atuamos a Partir de Tavira</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
             Com base em Tavira, cobrimos com rapidez todo o concelho e as localidades vizinhas num raio de 30 a 40 km:
           </p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-sm font-semibold text-slate-700">
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 text-sm font-semibold text-slate-700">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Tavira Centro</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Santa Luzia</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Cabanas de Tavira</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Conceição</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Luz de Tavira</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Santo Estêvão</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Olhão & Fuseta</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>Faro & Montenegro</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>VRSA & Monte Gordo</span>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
             <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
             <span>São Brás de Alportel</span>
           </div>
@@ -619,37 +652,39 @@ const faqSchema = {
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-16 bg-white border-b border-slate-200">
+    <section id="faq" class="py-20 md:py-24 bg-slate-50/80">
       <div class="max-w-3xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Dúvidas Frequentes</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Perguntas Frequentes</h2>
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Dúvidas Frequentes
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Perguntas Frequentes</h2>
         </div>
 
         <div class="space-y-4">
-          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-base text-slate-900">Cobram taxa de deslocação em Tavira?</h3>
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Cobram taxa de deslocação em Tavira?</h3>
             <p class="text-sm text-slate-600 mt-2 leading-relaxed">
               Para reparações efetuadas por nós em Tavira e freguesias próximas, a deslocação está incluída no orçamento acordado antes da intervenção. Caso pretenda apenas uma visita técnica para diagnóstico sem avançar com o trabalho, cobramos uma taxa fixa de 25€.
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-base text-slate-900">Passam fatura com NIF para o IRS?</h3>
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Passam fatura com NIF para o IRS?</h3>
             <p class="text-sm text-slate-600 mt-2 leading-relaxed">
               Sim, obrigatoriamente. Emitimos fatura-recibo com o seu NIF comunicada à Autoridade Tributária. Isso confere-lhe garantia formal de mão de obra e dedução nas despesas de manutenção da habitação.
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-base text-slate-900">Do you speak English? (Falam inglês?)</h3>
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Do you speak English? (Falam inglês?)</h3>
             <p class="text-sm text-slate-600 mt-2 leading-relaxed">
               Sim, fluente! We speak English fluently. Uma grande percentagem dos nossos clientes em Tavira, Cabanas e Santa Luzia são residentes estrangeiros. Garantimos comunicação clara e sem mal-entendidos técnicos.
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-            <h3 class="font-bold text-base text-slate-900">Quais as formas de pagamento disponíveis?</h3>
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Quais as formas de pagamento disponíveis?</h3>
             <p class="text-sm text-slate-600 mt-2 leading-relaxed">
               Aceitamos MBWay, transferência bancária imediata ou dinheiro logo após a conclusão e teste de funcionamento do trabalho.
             </p>
@@ -658,13 +693,24 @@ const faqSchema = {
       </div>
     </section>
 
-    <!-- FINAL CTA BANNER -->
-    <section class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <!-- FINAL CTA BANNER WITH SUBTLE WATER WAVE -->
+    <section class="relative overflow-hidden pt-20 pb-20 md:pt-24 md:pb-24 bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white text-center">
+      <!-- Top Wave Transition from FAQ -->
+      <div class="absolute top-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+        <svg class="relative block w-full h-7 sm:h-10 text-slate-50/80" viewBox="0 0 1440 54" fill="none" preserveAspectRatio="none">
+          <path d="M0,0 L1440,0 L1440,22 C1120,56 720,-8 360,32 C180,50 60,34 0,18 Z" fill="currentColor" />
+        </svg>
+      </div>
+
+      <!-- Subtle Water Ripple Rings in Background -->
+      <div class="pointer-events-none absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-sky-300/10"></div>
+      <div class="pointer-events-none absolute -right-16 -top-16 w-72 h-72 rounded-full border border-sky-300/10"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
           Tem uma fuga ou avaria em Tavira?
         </h2>
-        <p class="text-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+        <p class="text-blue-100/90 text-base sm:text-lg mb-9 max-w-2xl mx-auto leading-relaxed">
           Envie-nos uma mensagem no WhatsApp com foto ou descrição. Respondemos em poucos minutos com orçamento e disponibilidade.
         </p>
         <div class="flex items-center justify-center">
@@ -672,7 +718,7 @@ const faqSchema = {
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-base shadow-lg transition active:scale-95"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold text-base shadow-lg shadow-emerald-950/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-95"
           >
             Falar no WhatsApp Agora
           </a>
