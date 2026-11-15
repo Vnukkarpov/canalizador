@@ -4,7 +4,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { 
   Toilet, 
+  Droplets,
   ShowerHead, 
+  Bath,
+  Columns2,
+  Lightbulb,
   Flame, 
   Waves, 
   WashingMachine, 
@@ -103,10 +107,10 @@ const faqSchema = {
             </a>
 
             <a 
-              href="#precos" 
+              href="#servicos" 
               class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition"
             >
-              Ver Tabela de Preços ↓
+              Ver Serviços e Preços ↓
             </a>
           </div>
 
@@ -133,14 +137,14 @@ const faqSchema = {
       </div>
     </section>
 
-    <!-- AVARIAS COMUNS (CLICK-TO-WHATSAPP) -->
-    <section id="avarias" class="py-16 bg-white border-b border-slate-200">
+    <!-- SERVIÇOS & PREÇOS TRANSPARENTES (CLICK-TO-WHATSAPP) -->
+    <section id="servicos" class="py-16 bg-white border-b border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Apoio Rápido</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Qual é a avaria em sua casa hoje?</h2>
+          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Serviços & Preços Claros</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Do que precisa em sua casa hoje?</h2>
           <p class="text-slate-600 mt-3 text-sm sm:text-base">
-            Clique no seu problema para abrir diretamente uma conversa no WhatsApp com orçamento estimado e disponibilidade:
+            Preços de referência transparentes e sem surpresas. Clique no serviço desejado para abrir diretamente o WhatsApp com orçamento e disponibilidade:
           </p>
         </div>
 
@@ -153,21 +157,29 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <Toilet className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Toilet className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45–60 min</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Autoclismo a Correr Água</h3>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Reparação de Autoclismo</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Água a correr continuamente na sanita, boia que não fecha ou autoclismo que não enche.
+                Água a correr continuamente na sanita, boia que não fecha, botão de descarga avariado ou autoclismo que não enche.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 45€</span>
-              <span class="group-hover:translate-x-1 transition">Pedir Reparação →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 45€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
             </div>
           </a>
 
-          <!-- Card 2: Torneira -->
+          <!-- Card 2: Torneira Cozinha / Lavatório -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20reparar/trocar%20uma%20torneira%20em%20Tavira"
             target="_blank"
@@ -175,21 +187,149 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <ShowerHead className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Droplets className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45 min</span>
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Torneira a Pingar ou Nova</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Substituição de torneira de cozinha ou casa de banho, troca de cartucho e bichas flexíveis.
+                Substituição de torneira de lava-loiça, lavatório ou bidé, troca de cartucho cerâmico e bichas flexíveis novas.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 40€</span>
-              <span class="group-hover:translate-x-1 transition">Pedir Reparação →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 40€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
             </div>
           </a>
 
-          <!-- Card 3: Termoacumulador -->
+          <!-- Card 3: Misturadora de Duche / Banheira -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20substituir%20uma%20misturadora%20de%20duche/banheira%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <ShowerHead className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45–60 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Misturadora de Duche / Banheira</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Troca de torneira misturadora ou termostática de duche, instalação de coluna de duche, rampa, bicha e chuveiro.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 45€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4: Substituição de Sanita -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20substituir/instalar%20uma%20sanita%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Bath className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Substituição de Sanita Completa</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Desmontagem da sanita antiga, instalação de sanita nova com autoclismo e tampo, ligação ao esgoto e vedação em silicone.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 75€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 5: Instalação de Móvel de Casa de Banho (Lavatório) -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20instalar%20um%20móvel%20de%20casa%20de%20banho%20com%20lavatório%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Columns2 className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30 – 2h</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Móvel de Casa de Banho (Lavatório)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Montagem e fixação de móvel suspenso ou de pousar, instalação do lavatório, torneira, válvula de escoamento e sifão.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 75€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 6: Instalação de Espelho de Casa de Banho -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20instalar%20um%20espelho%20de%20casa%20de%20banho%20em%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Lightbulb className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~30–45 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Espelho ou Armário de WC</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Furação limpa em azulejo sem partir, fixação nivelada de espelho simples, armário de parede ou espelho com iluminação LED.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 35€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 7: Termoacumulador -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20o%20meu%20termoacumulador%20não%20aquece/está%20a%20verter%20água"
             target="_blank"
@@ -197,21 +337,29 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <Flame className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Flame className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1h30 – 2h</span>
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Termoacumulador (Cilindro)</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Sem água quente, água morna devido ao calcário, fuga na válvula de segurança ou montagem de novo.
+                Substituição e montagem de cilindro novo, falta de água quente, limpeza de calcário ou troca de válvula de segurança.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 95€</span>
-              <span class="group-hover:translate-x-1 transition">Pedir Assistência →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 95€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
             </div>
           </a>
 
-          <!-- Card 4: Desentupimento simples -->
+          <!-- Card 8: Desentupimento simples -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20tenho%20um%20cano/ralo/lava-loiça%20entupido%20em%20Tavira"
             target="_blank"
@@ -219,21 +367,29 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <Waves className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <Waves className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~45 min</span>
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Sifão e Lava-Loiça Entupido</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Água que não escoa na pia ou base de duche, maus cheiros na canalização e limpeza mecânica de sifões.
+                Água que não escoa na pia ou base de duche, maus cheiros na canalização, substituição e limpeza mecânica de sifões.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 50€</span>
-              <span class="group-hover:translate-x-1 transition">Desentupir Agora →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 50€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
             </div>
           </a>
 
-          <!-- Card 5: Máquinas de lavar -->
+          <!-- Card 9: Máquinas de lavar -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20ligar%20uma%20máquina%20de%20lavar%20em%20Tavira"
             target="_blank"
@@ -241,21 +397,29 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <WashingMachine className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <WashingMachine className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~30–45 min</span>
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Ligação de Eletrodomésticos</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Instalação hidráulica segura de máquinas de lavar roupa ou loiça com torneira de segurança e esgoto.
+                Instalação hidráulica segura de máquinas de lavar roupa ou loiça com torneira de segurança, esgoto e nivelamento.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 35€</span>
-              <span class="group-hover:translate-x-1 transition">Agendar Instalação →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 35€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
             </div>
           </a>
 
-          <!-- Card 6: Filtros Calcário -->
+          <!-- Card 10: Filtros Calcário -->
           <a 
             href="https://wa.me/351912224291?text=Olá%20Karpov,%20quero%20instalar%20um%20filtro%20anticalcário%20em%20Tavira"
             target="_blank"
@@ -263,95 +427,62 @@ const faqSchema = {
             class="group p-6 rounded-2xl bg-slate-50 hover:bg-blue-50/50 border border-slate-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
           >
             <div>
-              <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
-                <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition duration-200">
+                  <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">~1 hora</span>
               </div>
               <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition">Filtro Anticalcário (Água Dura)</h3>
               <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                Instalação de filtro de polifosfatos para proteger o termoacumulador da água dura do Algarve.
+                Instalação de filtro de polifosfatos para proteger o termoacumulador e as máquinas da água calcária do Algarve.
               </p>
             </div>
-            <div class="mt-4 pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>A partir de 65€</span>
-              <span class="group-hover:translate-x-1 transition">Proteger Aparelhos →</span>
+            <div class="mt-5 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Mão de obra</span>
+                <span class="font-extrabold text-base text-blue-600">A partir de 65€</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition">
+                Pedir no WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 11 (Span 2 cols on lg): Outra Avaria / Orçamento por Foto -->
+          <a 
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20orçamento%20para%20um%20serviço%20em%20Tavira.%20Posso%20enviar%20foto?"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-6 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 text-white border border-blue-700 transition-all shadow-sm hover:shadow-lg sm:col-span-2 lg:col-span-2 flex flex-col justify-between"
+          >
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-blue-50 text-xs font-semibold mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Orçamento Rápido por Foto
+              </div>
+              <h3 class="font-extrabold text-xl sm:text-2xl text-white">Precisa de outra reparação ou de vários serviços na mesma visita?</h3>
+              <p class="text-blue-100 text-sm sm:text-base mt-2 leading-relaxed max-w-xl">
+                Envie-nos uma fotografia ou pequeno vídeo pelo WhatsApp. Damos-lhe um orçamento fechado antes de deslocar e fazemos desconto ao juntar 2 ou mais instalações na mesma deslocação.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span class="text-xs sm:text-sm text-blue-100 font-medium">Resposta rápida • Sem compromisso</span>
+              <span class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 group-hover:bg-emerald-400 text-white font-bold text-xs sm:text-sm transition">
+                Enviar Foto no WhatsApp →
+              </span>
             </div>
           </a>
         </div>
-      </div>
-    </section>
 
-    <!-- PREÇOS TRANSPARENTES -->
-    <section id="precos" class="py-16 bg-slate-50 border-b border-slate-200">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <span class="text-blue-600 font-bold text-xs uppercase tracking-wider">Transparência Total</span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2">Preços de Referência Sem Surpresas</h2>
-          <p class="text-slate-600 mt-3 text-sm sm:text-base">
-            O valor que combinamos antes de começar é exatamente o valor que paga. Sem taxas escondidas no final.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div class="divide-y divide-slate-100">
-            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base">Reparação de Autoclismo (Sanita)</h4>
-                <p class="text-xs sm:text-sm text-slate-500">Mecanismo de descarga, substituição de boia ou vedante de borracha</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <span class="font-extrabold text-blue-600 text-lg">A partir de 45€</span>
-                <p class="text-[11px] text-slate-400">~45–60 min</p>
-              </div>
-            </div>
-
-            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base">Substituição de Torneira ou Misturadora</h4>
-                <p class="text-xs sm:text-sm text-slate-500">Lava-loiça, lavatório ou base de duche, com bichas flexíveis novas</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <span class="font-extrabold text-blue-600 text-lg">A partir de 40€</span>
-                <p class="text-[11px] text-slate-400">~45 min</p>
-              </div>
-            </div>
-
-            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base">Montagem de Termoacumulador Elétrico</h4>
-                <p class="text-xs sm:text-sm text-slate-500">Desmontagem do antigo, fixação reforçada, ligação hidráulica e teste</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <span class="font-extrabold text-blue-600 text-lg">A partir de 95€</span>
-                <p class="text-[11px] text-slate-400">~1h30 – 2h</p>
-              </div>
-            </div>
-
-            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base">Desentupimento Simples de Sifão / Ralo</h4>
-                <p class="text-xs sm:text-sm text-slate-500">Desobstrução e higienização mecânica de lava-loiças, lavatórios ou duches</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <span class="font-extrabold text-blue-600 text-lg">A partir de 50€</span>
-                <p class="text-[11px] text-slate-400">~45 min</p>
-              </div>
-            </div>
-
-            <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-slate-50/60 transition">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base">Instalação de Filtro Anticalcário</h4>
-                <p class="text-xs sm:text-sm text-slate-500">Proteção de polifosfatos para cilindro ou entrada de eletrodomésticos</p>
-              </div>
-              <div class="text-left sm:text-right">
-                <span class="font-extrabold text-blue-600 text-lg">A partir de 65€</span>
-                <p class="text-[11px] text-slate-400">~1 hora</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-4 bg-slate-100/70 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <span>Valores de mão de obra de referência. Materiais faturados à parte com comprovativo.</span>
-            <span class="font-semibold text-slate-700">Fatura oficial com NIF incluída</span>
-          </div>
+        <!-- Nota de Transparência -->
+        <div class="mt-8 p-4 sm:px-6 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+          <span>
+            <strong class="text-slate-800">Preço fechado sem surpresas:</strong> o valor acordado antes de iniciar é exatamente o que paga. Materiais faturados à parte com comprovativo.
+          </span>
+          <span class="font-bold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full whitespace-nowrap">
+            Fatura oficial com NIF incluída
+          </span>
         </div>
       </div>
     </section>
