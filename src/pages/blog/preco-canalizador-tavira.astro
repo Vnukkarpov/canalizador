@@ -1,0 +1,233 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Quanto Custa um Canalizador em Tavira? Preços 2026 | Karpov';
+const description =
+  'Quanto custa um canalizador em Tavira em 2026? Tabela de preços de reparações comuns, taxa de deslocação, IVA e como evitar surpresas no orçamento.';
+const published = '2026-11-16';
+
+const faq = [
+  {
+    q: 'Quanto cobra um canalizador por hora em Tavira?',
+    a: 'Depende do tipo de trabalho: 25€ a 45€ por hora em trabalhos planeados simples (torneiras, sifões, sanitas), 45€ a 80€ por hora em diagnósticos complexos, soldadura/ligação de tubagens e montagem de termoacumuladores, e 60€ a 90€ ou mais em urgências (noite, fim de semana, feriados). Valores sem IVA.',
+  },
+  {
+    q: 'Quanto custa a deslocação de um canalizador?',
+    a: 'Normalmente entre 25€ e 50€ em horário normal. Em chamadas urgentes (noite, fim de semana, feriados) o fixo de deslocação ou do primeiro serviço costuma ser de 80€ a 150€. Em muitos casos o valor fica incluído no orçamento se avançar com o serviço. Na Karpov, a visita só é cobrada (25€) se pedir apenas diagnóstico e decidir não avançar.',
+  },
+  {
+    q: 'Que IVA se aplica a uma reparação de canalização?',
+    a: 'Em obras de reparação, reconstrução e restauro de habitação (casas e apartamentos) aplica-se a taxa reduzida de 6% (Verba 2.27 da Lista I do CIVA), desde que os materiais não ultrapassem 20% do valor total da fatura. Se ultrapassarem, a mão de obra mantém os 6% e os materiais são faturados em linha separada a 23%. Confirme sempre com o canalizador antes de aceitar o orçamento.',
+  },
+  {
+    q: 'Posso pedir fatura com NIF?',
+    a: 'Deve sempre pedir. A fatura garante os seus direitos de consumidor e a garantia do trabalho, e algumas despesas podem ser relevantes para efeitos de IRS.',
+  },
+  {
+    q: 'Os preços são iguais no verão e no inverno?',
+    a: 'Os preços base mantêm-se, mas no verão a procura em Tavira, Cabanas e Santa Luzia é maior, por isso a marcação pode demorar mais. Urgências fora de horas costumam ter acréscimo.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Quanto custa um canalizador em Tavira? Preços 2026',
+    description,
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'pt-PT',
+    author: { '@type': 'Organization', name: 'Karpov' },
+    publisher: { '@type': 'Organization', name: 'Karpov', url: 'https://karpov.pt' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+
+const prices = [
+  ['Reparação de autoclismo', 'Boia, mecanismo de descarga ou vedante', 'a partir de 45€', '45–60 min'],
+  ['Substituição de torneira / misturadora', 'Remoção da antiga, montagem da nova e bichas flexíveis', 'a partir de 40€', '45 min'],
+  ['Substituição de termoacumulador', 'Retirar o antigo, fixar o novo, ligação hidráulica e teste', 'a partir de 95€', '1h30–2h'],
+  ['Desentupimento simples (sifão / ralo)', 'Desmontagem, limpeza e desobstrução mecânica', 'a partir de 50€', '45 min'],
+  ['Ligação de máquina de lavar', 'Ligação à água e esgoto, nivelamento e teste', 'a partir de 35€', '30–45 min'],
+  ['Filtro anticalcário', 'Instalação de sistema de proteção contra calcário', 'a partir de 65€', '1 hora'],
+];
+
+const wa =
+  'https://wa.me/351912224291?text=Olá%20Karpov,%20gostaria%20de%20um%20orçamento%20para%20um%20serviço%20de%20canalização%20em%20Tavira';
+---
+
+<Layout title={title} description={description} schema={schema as any}>
+  <Header />
+
+  <main class="flex-grow">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <nav class="text-sm text-slate-500 mb-6">
+        <a href="/" class="hover:text-blue-600">Início</a> /
+        <a href="/blog" class="hover:text-blue-600">Blog</a>
+      </nav>
+
+      <p class="text-blue-600 font-bold text-xs uppercase tracking-widest">Preços e orçamentos</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 leading-tight">
+        Quanto custa um canalizador em Tavira? Preços de referência 2026
+      </h1>
+      <p class="text-sm text-slate-500 mt-3">
+        Por Karpov · Publicado em <time datetime={published}>16 de novembro de 2026</time>
+      </p>
+
+      <div class="mt-8 p-5 rounded-2xl bg-blue-50 border border-blue-100 text-slate-800 leading-relaxed">
+        <strong>Resposta rápida:</strong> em Tavira, uma reparação simples de canalização (autoclismo, torneira,
+        sifão) custa normalmente entre <strong>35€ e 90€</strong>, sem IVA. A mão de obra custa
+        <strong>25–45€ por hora</strong> em trabalhos simples e <strong>45–80€ por hora</strong> em trabalhos
+        complexos; em urgências chega a <strong>60–90€ ou mais</strong>. A deslocação ronda os
+        <strong>25–50€</strong>. Substituir um termoacumulador começa perto dos <strong>95€</strong> só de mão de obra.
+        Em habitação, o IVA é de <strong>6%</strong> se os materiais forem até 20% da fatura.
+      </div>
+
+      <div class="mt-10 space-y-5 text-slate-700 leading-relaxed text-[17px]">
+        <p>
+          Chamar um canalizador sem saber quanto vai pagar é uma das maiores preocupações de quem vive em Tavira,
+          Cabanas ou Santa Luzia. Neste guia explicamos como se formam os preços, o que costuma estar incluído e
+          como pedir um orçamento sem surpresas.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Tabela de preços das reparações mais comuns</h2>
+        <p>
+          Os valores abaixo são indicativos, <strong>sem IVA</strong> (6% em habitação, nas condições descritas mais
+          abaixo) e não incluem peças, salvo indicação em contrário. O preço final depende do estado da instalação e do acesso ao local.
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="px-4 py-3 font-bold">Serviço</th>
+                <th class="px-4 py-3 font-bold">O que inclui</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Preço indicativo</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Duração</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              {prices.map(([s, i, p, t]) => (
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{s}</td>
+                  <td class="px-4 py-3">{i}</td>
+                  <td class="px-4 py-3 whitespace-nowrap font-bold text-blue-700">{p}</td>
+                  <td class="px-4 py-3 whitespace-nowrap">{t}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Como se calcula o preço de um canalizador</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Deslocação:</strong> cobre o tempo e o combustível até sua casa. Costuma variar entre 25€ e 50€.</li>
+          <li><strong>Mão de obra:</strong> à hora (ver tabela abaixo) ou a preço fechado por tarefa. Para reparações simples, o preço fechado é mais transparente.</li>
+          <li><strong>Materiais:</strong> boias, cartuchos, bichas, vedantes ou o aparelho novo. Peça para ver o custo das peças separado.</li>
+          <li><strong>Urgência:</strong> chamadas à noite, ao fim de semana ou em feriados têm tarifa própria.</li>
+          <li><strong>IVA:</strong> 6% em reparação e reabilitação de habitação, com regras sobre o peso dos materiais (ver secção abaixo).</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Quanto cobra um canalizador por hora</h2>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="px-4 py-3 font-bold">Tipo de trabalho</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Preço por hora (sem IVA)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-4 py-3">Trabalhos planeados em dias úteis (torneiras, sifões, sanitas)</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">25€ – 45€</td></tr>
+              <tr><td class="px-4 py-3">Diagnóstico complexo, soldadura e ligação de tubagens, montagem de termoacumuladores</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">45€ – 80€</td></tr>
+              <tr><td class="px-4 py-3">Urgências (noite, fim de semana, feriados)</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">60€ – 90€ ou mais</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Nas urgências é comum haver um valor fixo pelo primeiro serviço ou deslocação, tipicamente de
+          <strong>80€ a 150€</strong>.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Que IVA se paga numa reparação de canalização?</h2>
+        <p>
+          Em trabalhos de reparação, reconstrução e restauro de <strong>habitação</strong> (casas e apartamentos),
+          aplica-se a <strong>taxa reduzida de 6%</strong> (Verba 2.27 da Lista I do CIVA), com uma condição:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Materiais até 20% do total da fatura:</strong> toda a fatura é taxada a 6%.</li>
+          <li><strong>Materiais acima de 20%:</strong> a mão de obra paga 6% e os materiais aparecem numa linha separada a 23%.</li>
+        </ul>
+        <p>Por isso, peça sempre uma fatura com mão de obra e materiais discriminados.</p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Preço à hora ou preço fechado?</h2>
+        <p>
+          O preço à hora parece barato, mas o valor final depende de quanto tempo o trabalho demorar. O
+          <strong>preço fechado</strong> dá-lhe previsibilidade: sabe o valor total antes de o canalizador começar,
+          e qualquer imprevisto que apareça tem de ser combinado consigo primeiro.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Sinais de que o orçamento não é justo</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Recusa de dar um valor ou uma estimativa antes de começar.</li>
+          <li>Não emite fatura, ou só a emite “se pedir”.</li>
+          <li>Preço muito abaixo do mercado, seguido de extras durante o serviço.</li>
+          <li>Não indica o custo das peças separadamente.</li>
+          <li>Não dá garantia por escrito sobre o trabalho.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Como poupar na fatura</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Envie fotografias da avaria pelo WhatsApp: ajuda a estimar o preço e a levar as peças certas.</li>
+          <li>Agrupe várias pequenas tarefas na mesma visita e pague a deslocação uma só vez.</li>
+          <li>Evite urgências fora de horas sempre que possível. Feche a água no ponto geral e marque para o dia seguinte.</li>
+          <li>Em Tavira a água é calcária: um filtro anticalcário protege o termoacumulador e evita avarias futuras.</li>
+        </ul>
+      </div>
+
+      <div class="mt-12 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm text-center">
+        <h2 class="text-xl font-bold text-slate-900">Precisa de um orçamento em Tavira?</h2>
+        <p class="text-slate-600 mt-2">
+          Descreva a avaria e envie uma foto. Respondemos com um valor antes de começar qualquer trabalho.
+        </p>
+        <a
+          href={wa}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex mt-5 items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-sm transition"
+        >
+          Pedir orçamento no WhatsApp
+        </a>
+      </div>
+
+      <section class="mt-14">
+        <h2 class="text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
+        <div class="mt-5 space-y-3">
+          {faq.map((f) => (
+            <details class="group rounded-xl bg-white border border-slate-200 p-4">
+              <summary class="cursor-pointer font-semibold text-slate-900">{f.q}</summary>
+              <p class="mt-3 text-slate-700 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <p class="mt-10 text-xs text-slate-500">
+        Os preços são indicativos e podem variar consoante o caso. Última atualização: novembro de 2026.
+      </p>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

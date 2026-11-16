@@ -10,7 +10,7 @@ export default defineConfig({
   site: 'https://karpov.pt',
   integrations: [react(), mdx(), sitemap({
       // Temporary: keep "coming soon" pages out of the sitemap until they have real content
-      filter: (page) => !page.includes('/blog') && !page.includes('/calculadoras'),
+      filter: (page) => !page.includes('/calculadoras'),
     })],
   vite: {
     plugins: [tailwindcss()],
