@@ -8,10 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://karpov.pt',
-  integrations: [react(), mdx(), sitemap({
-      // Temporary: keep "coming soon" pages out of the sitemap until they have real content
-      filter: (page) => !page.includes('/calculadoras'),
-    })],
+  integrations: [react(), mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
