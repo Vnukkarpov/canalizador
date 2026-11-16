@@ -238,3 +238,28 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu { animation: none; }
 }
+
+/* Animated water surface on CTA banner */
+.water-surface {
+  height: 28px;
+}
+@media (min-width: 640px) {
+  .water-surface { height: 40px; }
+}
+.water-wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+  will-change: transform;
+}
+.water-wave-back { animation: water-slide 14s linear infinite reverse; }
+.water-wave-front { animation: water-slide 9s linear infinite; }
+@keyframes water-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .water-wave { animation: none; }
+}

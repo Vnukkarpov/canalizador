@@ -694,17 +694,22 @@ const faqSchema = {
     </section>
 
     <!-- FINAL CTA BANNER WITH SUBTLE WATER WAVE -->
-    <section class="relative overflow-hidden pt-20 pb-20 md:pt-24 md:pb-24 bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white text-center">
-      <!-- Top Wave Transition from FAQ -->
-      <div class="absolute top-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
-        <svg class="relative block w-full h-7 sm:h-10 text-slate-50/80" viewBox="0 0 1440 54" fill="none" preserveAspectRatio="none">
-          <path d="M0,0 L1440,0 L1440,22 C1120,56 720,-8 360,32 C180,50 60,34 0,18 Z" fill="currentColor" />
+    <section class="relative pt-20 pb-20 md:pt-24 md:pb-24 bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white text-center">
+      <!-- Animated water surface (sits right above the blue block) -->
+      <div class="water-surface absolute left-0 right-0 bottom-full -mb-px overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+        <svg class="water-wave water-wave-back" viewBox="0 0 1440 40" preserveAspectRatio="none" fill="none">
+          <path d="M0,20 C120,4 240,4 360,20 S600,36 720,20 S960,4 1080,20 S1320,36 1440,20 V40 H0 Z" fill="#1d4ed8" fill-opacity="0.35" />
+        </svg>
+        <svg class="water-wave water-wave-front" viewBox="0 0 1440 40" preserveAspectRatio="none" fill="none">
+          <path d="M0,24 C120,8 240,8 360,24 S600,40 720,24 S960,8 1080,24 S1320,40 1440,24 V40 H0 Z" fill="#1d4ed8" />
         </svg>
       </div>
 
       <!-- Subtle Water Ripple Rings in Background -->
-      <div class="pointer-events-none absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-sky-300/10"></div>
-      <div class="pointer-events-none absolute -right-16 -top-16 w-72 h-72 rounded-full border border-sky-300/10"></div>
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-sky-300/10"></div>
+        <div class="absolute -right-16 -top-16 w-72 h-72 rounded-full border border-sky-300/10"></div>
+      </div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
