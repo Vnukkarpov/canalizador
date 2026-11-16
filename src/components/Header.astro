@@ -1,10 +1,26 @@
 ---
+const path = Astro.url.pathname;
+
+const navItems = [
+  { label: 'Serviços & Preços', href: '/#servicos' },
+  { label: 'Zonas de Atuação', href: '/#zonas' },
+  { label: 'Porquê Nós', href: '/#sobre' },
+  { label: 'Calculadoras', href: '/calculadoras/', section: '/calculadoras' },
+  { label: 'Blog', href: '/blog/', section: '/blog' },
+  { label: 'FAQ', href: '/#faq' },
+];
+
+const isActive = (item: { section?: string }) =>
+  !!item.section && path.startsWith(item.section);
+
+const whatsappUrl =
+  'https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira';
 ---
 
-<header class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/80 transition-all">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+<header id="site-header" class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/80 transition-all">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
     <!-- Brand -->
-    <a href="/" class="group flex items-center gap-2.5">
+    <a href="/" class="group flex items-center gap-2.5 shrink-0" aria-label="Karpov Canalização, página inicial">
       <div>
         <div class="brand-word font-display font-extrabold text-2xl tracking-tight text-slate-900 flex items-baseline" aria-label="Karpov">
           <span aria-hidden="true">KARP</span><span class="brand-drop" aria-hidden="true"><svg viewBox="0 0 24 28" fill="none">
@@ -22,28 +38,29 @@
       </div>
     </a>
 
-    <!-- Navigation & Quick Contact -->
-    <div class="flex items-center gap-5">
-      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-        <a href="#servicos" class="relative py-1 hover:text-blue-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-gradient-to-r after:from-blue-600 after:to-sky-400 after:rounded-full after:transition-all after:duration-300">Serviços & Preços</a>
-        <a href="#sobre" class="relative py-1 hover:text-blue-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-gradient-to-r after:from-blue-600 after:to-sky-400 after:rounded-full after:transition-all after:duration-300">Porquê Nós</a>
-        <a href="#zonas" class="relative py-1 hover:text-blue-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-gradient-to-r after:from-blue-600 after:to-sky-400 after:rounded-full after:transition-all after:duration-300">Zonas de Atuação</a>
-        <a href="#faq" class="relative py-1 hover:text-blue-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-gradient-to-r after:from-blue-600 after:to-sky-400 after:rounded-full after:transition-all after:duration-300">FAQ</a>
-      </nav>
+    <!-- Desktop navigation -->
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          aria-current={isActive(item) ? 'page' : undefined}
+          class:list={[
+            "relative py-1 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:rounded-full after:bg-gradient-to-r after:from-blue-600 after:to-sky-400 after:transition-all after:duration-300 hover:text-blue-600 hover:after:w-full",
+            isActive(item) ? 'text-blue-600 after:w-full' : 'after:w-0',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
 
-      <!-- Language Pill -->
-      <div class="hidden lg:flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100/90 text-slate-700 border border-slate-200/80">
-        <span>🇵🇹 PT</span>
-        <span class="text-slate-300">|</span>
-        <span>🇬🇧 EN</span>
-      </div>
-
-      <!-- Action Button -->
-      <a 
-        href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira"
+    <div class="flex items-center gap-3">
+      <!-- WhatsApp button (hidden on small screens: sticky button is at the bottom) -->
+      <a
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-sm shadow-emerald-600/20 hover:shadow-md hover:shadow-emerald-600/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-95 whitespace-nowrap"
+        class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-sm shadow-emerald-600/20 hover:shadow-md hover:shadow-emerald-600/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-95 whitespace-nowrap"
       >
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
@@ -51,6 +68,82 @@
         </span>
         Orçamento via WhatsApp
       </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200 bg-white text-slate-700 hover:text-blue-600 hover:border-blue-300 transition active:scale-95"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="icon-open w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg class="icon-close w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden" hidden>
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 pb-6 pt-2 flex flex-col" aria-label="Navegação móvel">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          aria-current={isActive(item) ? 'page' : undefined}
+          class:list={[
+            'mobile-link flex items-center justify-between py-3.5 border-b border-slate-100 text-base font-semibold',
+            isActive(item) ? 'text-blue-600' : 'text-slate-800',
+          ]}
+        >
+          {item.label}
+          <svg class="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </a>
+      ))}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-5 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-sm transition active:scale-[0.98]"
+      >
+        Orçamento via WhatsApp
+      </a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = toggle?.querySelector('.icon-open');
+  const iconClose = toggle?.querySelector('.icon-close');
+
+  function setOpen(open: boolean) {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    menu.hidden = !open;
+  }
+
+  toggle?.addEventListener('click', () => {
+    setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
+    if (e.matches) setOpen(false);
+  });
+</script>

@@ -6,13 +6,15 @@ interface Props {
   description: string;
   schema?: Record<string, any>;
   canonicalUrl?: string;
+  noindex?: boolean;
 }
 
 const { 
   title, 
   description, 
   schema,
-  canonicalUrl = Astro.url.href 
+  canonicalUrl = Astro.url.href,
+  noindex = false
 } = Astro.props;
 
 // LocalBusiness Schema for Karpov in Tavira
@@ -74,6 +76,7 @@ const localBusinessSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />

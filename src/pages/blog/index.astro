@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { BookOpen } from 'lucide-react';
+---
+
+<Layout
+  title="Blog | Guias de Canalização em Tavira e no Algarve | Karpov"
+  description="Guias práticos de canalização: preços, avarias comuns e dicas para a sua casa no Algarve."
+  noindex
+>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white py-20 md:py-28">
+      <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-200/35 blur-3xl"></div>
+      <div class="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center mb-6">
+          <BookOpen className="w-6 h-6 stroke-[1.8]" />
+        </div>
+        <span class="inline-flex items-center text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+          Em breve
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">Blog Karpov</h1>
+        <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
+          Estamos a preparar guias práticos sobre preços, avarias comuns e manutenção da canalização, com foco em Tavira e no Algarve.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+          <a href="/" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white hover:bg-blue-50/40 text-slate-800 hover:text-blue-700 font-bold border border-slate-300 hover:border-blue-300 transition">
+            ← Voltar ao início
+          </a>
+          <a
+            href="https://wa.me/351912224291?text=Olá%20Karpov,%20tenho%20uma%20dúvida%20sobre%20canalização"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-sm transition"
+          >
+            Tirar uma dúvida no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

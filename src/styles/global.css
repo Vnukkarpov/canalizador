@@ -215,3 +215,26 @@
     animation: none;
   }
 }
+
+/* Mobile menu panel */
+.mobile-menu {
+  border-top: 1px solid rgb(241 245 249);
+  background: rgba(255, 255, 255, 0.97);
+  animation: menu-slide 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+@keyframes menu-slide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keep anchored sections clear of the sticky header */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu { animation: none; }
+}
