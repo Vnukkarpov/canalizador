@@ -14,8 +14,14 @@ const MATERIALS: Record<Material, { label: string; hint: string }> = {
 };
 
 // Taxa fixa: ligação ao contador/ramal, colector, válvulas de corte gerais, teste de pressão
-const BASE_BY_TYPOLOGY = { T1: 380, T2: 520, T3: 680 } as const;
-type Typology = keyof typeof BASE_BY_TYPOLOGY;
+const BASE_PRICE = 400;
+type Typology = 'T1' | 'T2' | 'T3';
+
+const DEFAULT_POINTS_BY_TYPOLOGY: Record<Typology, Record<string, number>> = {
+  T1: { sanita: 1, lavatorio: 1, duche: 1, lavaloica: 1, maqLoica: 1, maqRoupa: 1 },
+  T2: { sanita: 2, lavatorio: 2, duche: 2, lavaloica: 1, maqLoica: 1, maqRoupa: 1 },
+  T3: { sanita: 3, lavatorio: 3, duche: 3, lavaloica: 1, maqLoica: 1, maqRoupa: 1 },
+};
 
 const PROPERTY = {
   apartamento: { label: 'Apartamento', factor: 1 },
@@ -168,14 +174,20 @@ export default function CalculadoraRemodelacao() {
   const [urgency, setUrgency] = useState<Urgency>('normal');
   const [drain, setDrain] = useState(false);
   const [laborOnly, setLaborOnly] = useState(false);
-  const [counts, setCounts] = useState<Record<string, number>>({
-    sanita: 1, lavatorio: 1, duche: 1, lavaloica: 1, maqLoica: 1, maqRoupa: 1,
-  });
+  const [counts, setCounts] = useState<Record<string, number>>(() => ({ ...DEFAULT_POINTS_BY_TYPOLOGY.T2 }));
   const [extras, setExtras] = useState<Record<ExtraId, boolean>>({
     termoacumulador: false, filtro: false, redutora: false, recirculacao: false, colectorExtra: false,
   });
 
   const setCount = (id: string, n: number) => setCounts((c) => ({ ...c, [id]: n }));
+  const handleTypologyChange = (t: Typology) => {
+    setTypology(t);
+    setCounts({ ...DEFAULT_POINTS_BY_TYPOLOGY[t] });
+  };
+  const handleScopeChange = (s: Scope) => {
+    setScope(s);
+    if (s === 'total') setDrain(true);
+  };
 
   const result = useMemo(() => {
     const matKey = material === 'pex' ? 'pex' : 'multi';
@@ -188,7 +200,7 @@ export default function CalculadoraRemodelacao() {
       pointsTotal += unit * n;
       pointsCount += n;
     }
-    const base = BASE_BY_TYPOLOGY[typology];
+    const base = BASE_PRICE;
     const extrasTotal = (Object.keys(EXTRAS) as ExtraId[]).reduce((s, k) => s + (extras[k] ? EXTRAS[k].price : 0), 0);
 
     const subtotal = base + pointsTotal;
@@ -251,7 +263,7 @@ export default function CalculadoraRemodelacao() {
             )}
             <div>
               <p className="text-sm font-semibold text-slate-700 mb-2">Tipologia</p>
-              <Choice value={typology} onChange={setTypology} options={typ} />
+              <Choice value={typology} onChange={handleTypologyChange} options={typ} />
             </div>
           </div>
         </Step>
@@ -265,8 +277,19 @@ export default function CalculadoraRemodelacao() {
           <div className="space-y-4">
             <div>
               <p className="text-sm font-semibold text-slate-700 mb-2">Tipo de obra</p>
-              <Choice value={scope} onChange={setScope}
+              <Choice value={scope} onChange={handleScopeChange}
                 options={(Object.keys(SCOPE) as Scope[]).map((k) => ({ id: k, label: SCOPE[k].label, hint: SCOPE[k].hint }))} />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-700 mb-2">Esgotos (drenagem)</p>
+              <Choice
+                value={drain ? 'sim' : 'nao'}
+                onChange={(v) => setDrain(v === 'sim')}
+                options={[
+                  { id: 'nao', label: 'Só abastecimento de água', hint: 'Mantém os esgotos atuais' },
+                  { id: 'sim', label: 'Água + esgotos (PVC)', hint: 'Recomendado na renovação total' },
+                ]}
+              />
             </div>
             <div>
               <p className="text-sm font-semibold text-slate-700 mb-2">Complexidade</p>
@@ -299,7 +322,6 @@ export default function CalculadoraRemodelacao() {
 
         <Step n={5} title="Extras e opções">
           <div className="space-y-2">
-            <Toggle label="Substituir também os esgotos (PVC)" hint="Tubagem de drenagem nova em todos os pontos acima" checked={drain} onChange={setDrain} />
             {(Object.keys(EXTRAS) as ExtraId[]).map((k) => (
               <Toggle key={k} label={EXTRAS[k].label} hint={EXTRAS[k].hint} checked={extras[k]}
                 onChange={(v) => setExtras((e) => ({ ...e, [k]: v }))} />
