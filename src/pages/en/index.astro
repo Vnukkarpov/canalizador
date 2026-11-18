@@ -1,0 +1,815 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import {
+  Toilet,
+  Droplets,
+  ShowerHead,
+  Columns2,
+  Lightbulb,
+  Flame,
+  Waves,
+  WashingMachine,
+  ShieldCheck,
+  Clock,
+  Receipt,
+  Sparkles,
+  FileText,
+  Wrench,
+  Languages,
+  MapPin,
+  Check,
+  Calculator,
+} from 'lucide-react';
+
+const pageTitle = 'Plumber in Tavira & Algarve | Fast Repairs & Clear Prices | Karpov';
+const pageDescription =
+  'Need a plumber in Tavira or the Eastern Algarve? Toilet cisterns, leaking taps, bathroom vanities, water heaters, and drain unblocking. Fixed upfront quotes and official invoice with NIF.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you charge a call-out fee in Tavira?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For jobs carried out in the Tavira municipality, travel is included in the fixed quote agreed before work starts. If you request an on-site diagnostic visit only and decide not to proceed with the work, a €25 call-out fee applies.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you issue an official invoice with NIF?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, every job includes an official invoice (fatura-recibo) reported to the Portuguese Tax Authority with your NIF, giving you a written workmanship warranty and IRS tax-deduction eligibility.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I write to you in English?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, you are very welcome to write in English or Portuguese. Our spoken English is simple and practical, so sending a photo or written message on WhatsApp helps us understand everything clearly before we arrive.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly can you schedule a visit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For standard repairs and installations, we usually book an exact time slot on the same day or the next working day.',
+      },
+    },
+  ],
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} schema={faqSchema}>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white pt-14 pb-24 md:pt-24 md:pb-32">
+      <!-- Subtle Ambient Water Glow Orbs -->
+      <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-200/35 blur-3xl"></div>
+      <div class="pointer-events-none absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-blue-200/25 blur-3xl"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <!-- Local Badge with Water Ripple Pulse -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-xs text-blue-800 text-xs sm:text-sm font-semibold mb-7 border border-blue-200/80 shadow-2xs">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+            </span>
+            Tavira & Eastern Algarve — from Faro to Vila Real de Santo António
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6">
+            Plumber in Tavira: <br class="hidden sm:inline" />
+            <span class="bg-gradient-to-r from-blue-600 via-blue-700 to-sky-500 bg-clip-text text-transparent">Fast Repairs</span>, Transparent Prices & Punctuality.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-600 mb-9 leading-relaxed max-w-2xl">
+            Running toilet cistern, dripping tap, toilet replacement, or water heater issue?
+            <strong class="text-slate-800 font-semibold">Karpov</strong> handles home plumbing repairs and installations with a fixed upfront quote, clean work, and an official invoice with NIF.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+            <a
+              href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20plumber%20in%20Tavira"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 hover:shadow-xl hover:shadow-emerald-600/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]"
+            >
+              Request Quote via WhatsApp
+            </a>
+
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-blue-50/40 text-slate-800 hover:text-blue-700 font-bold text-base border border-slate-300 hover:border-blue-300 shadow-xs hover:-translate-y-0.5 transition-all duration-200"
+            >
+              View Services & Prices ↓
+            </a>
+          </div>
+
+          <!-- Trust Checkmarks (Glass Pills) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
+              <span>Fixed Upfront Price</span>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
+              <span>On-Time Arrival</span>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
+              <span>Invoice with NIF</span>
+            </div>
+            <div class="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs border border-slate-200/80 rounded-xl px-3.5 py-2.5 shadow-2xs">
+              <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+              </div>
+              <span>Write in EN or PT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Water Wave Divider -->
+      <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+        <svg class="relative block w-full h-8 sm:h-12 text-white" viewBox="0 0 1440 72" fill="none" preserveAspectRatio="none">
+          <path d="M0,32 C320,76 640,-8 960,32 C1200,62 1360,24 1440,12 L1440,72 L0,72 Z" fill="rgba(224, 242, 254, 0.5)" />
+          <path d="M0,48 C360,8 720,72 1080,32 C1260,12 1380,28 1440,40 L1440,72 L0,72 Z" fill="currentColor" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- SERVICES & TRANSPARENT PRICING (CLICK-TO-WHATSAPP) -->
+    <section id="services" class="py-20 md:py-26 bg-white border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Clear Services & Pricing
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">What do you need fixed at home today?</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
+            Transparent reference prices with no hidden fees. Click the service you need to open WhatsApp directly for a quote and availability:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1: Toilet Cistern -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20my%20toilet%20cistern%20is%20running/broken%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10 4V2.5h4V4" />
+                    <rect x="4.5" y="4" width="15" height="3" rx="1" />
+                    <path d="M6 7v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7" />
+                    <path d="M9 12.5c1-.8 2-.8 3 0s2 .8 3 0" />
+                    <path d="M12 18v3.5" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45–60 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Toilet Cistern Repair</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Water constantly running into the bowl, faulty fill valve, broken flush button, or cistern not filling properly.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €45</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2: Kitchen / Basin Tap -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20tap%20repaired%20or%20replaced%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Droplets className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Dripping or New Tap</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Kitchen sink, bathroom basin, or bidet tap replacement, ceramic cartridge swap, and new braided flexi hoses.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €40</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3: Shower / Bath Mixer -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20to%20replace%20a%20shower/bath%20mixer%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <ShowerHead className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45–60 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Shower / Bath Mixer</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Replacement of standard or thermostatic shower mixers, shower columns, riser rails, hoses, and shower heads.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €45</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4: Full Toilet Replacement -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20to%20replace/install%20a%20toilet%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Toilet className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Full Toilet Replacement</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Removal of old toilet, installation of new pan, cistern and seat, waste connection, and neat silicone sealing.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €75</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 5: Bathroom Vanity Unit -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20bathroom%20vanity%20and%20basin%20installed%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Columns2 className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30 – 2h</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Bathroom Vanity & Basin</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Assembly and wall-mounting of vanity unit, basin fitting, tap, pop-up waste, and trap connection.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €75</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 6: Bathroom Mirror / Cabinet -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20bathroom%20mirror%20or%20cabinet%20mounted%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Lightbulb className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~30–45 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Bathroom Mirror or Cabinet</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Clean tile drilling without cracking, level mounting of standard mirrors, wall cabinets, or LED mirrors.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €35</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 7: Water Heater -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20my%20water%20heater%20is%20not%20heating/leaking%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Flame className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1h30 – 2h</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Water Heater (Boiler)</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Replacement and installation of electric water heaters, no hot water issues, descaling, or safety valve replacement.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €95</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 8: Drain Unblocking -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20have%20a%20blocked%20sink/drain%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <Waves className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~45 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Blocked Sink & Traps</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Slow or blocked sink and shower drains, bad drain odours, trap replacement, and mechanical drain clearing.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €50</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 9: Appliances -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20washing%20machine/dishwasher%20connected%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <WashingMachine className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~30–45 min</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Appliance Hook-Ups</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Safe plumbing installation of washing machines or dishwashers with shut-off valve, waste connection, and levelling.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €35</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 10: Anti-Limescale Filter -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20want%20to%20install%20an%20anti-limescale%20filter%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="water-card group p-6 sm:p-7 rounded-2xl bg-slate-50/75 hover:bg-white border border-slate-200/90 hover:border-blue-300 flex flex-col justify-between"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-5">
+                <div class="water-icon w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+                  <ShieldCheck className="w-5 h-5 stroke-[1.8]" />
+                </div>
+                <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200/90 shadow-2xs">~1 hour</span>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">Anti-Limescale Filter</h3>
+              <p class="text-slate-600 text-sm mt-2.5 leading-relaxed">
+                Polyphosphate filter installation to protect your water heater and appliances from the Algarve's hard water.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10.5px] uppercase tracking-wider text-slate-400 font-semibold block">Labour</span>
+                <span class="font-display font-extrabold text-base text-blue-600">From €65</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/90 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-200">
+                Ask on WhatsApp →
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 11 (Span 2 cols on lg): Photo Quote -->
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20quote%20for%20a%20plumbing%20job%20in%20Tavira.%20Can%20I%20send%20a%20photo?"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative overflow-hidden group p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 text-white border border-blue-600/80 transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-blue-900/20 hover:-translate-y-1 sm:col-span-2 lg:col-span-2 flex flex-col justify-between"
+          >
+            <!-- Decorative Water Rings in Corner -->
+            <div class="pointer-events-none absolute -right-16 -bottom-16 w-64 h-64 rounded-full border border-sky-300/15 group-hover:scale-110 transition-transform duration-500"></div>
+            <div class="pointer-events-none absolute -right-8 -bottom-8 w-44 h-44 rounded-full border border-sky-300/20 group-hover:scale-105 transition-transform duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-xs text-sky-100 text-xs font-semibold mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Fast Photo Quote
+              </div>
+              <h3 class="font-extrabold text-xl sm:text-2xl text-white">Need another repair or multiple jobs in one visit?</h3>
+              <p class="text-blue-100/90 text-sm sm:text-base mt-2.5 leading-relaxed max-w-xl">
+                Send us a photo or short video on WhatsApp. We give you a fixed quote before travelling and offer a discount when combining 2 or more jobs in the same visit.
+              </p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span class="text-xs sm:text-sm text-sky-100/90 font-medium">Fast reply • No obligation</span>
+              <span class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 group-hover:bg-emerald-400 text-white font-bold text-xs sm:text-sm shadow-sm transition-all">
+                Send Photo on WhatsApp →
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Transparency Note -->
+        <div class="mt-10 p-4 sm:px-6 rounded-2xl bg-slate-50 border border-slate-200/90 text-xs sm:text-sm text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+          <span>
+            <strong class="text-slate-800">Fixed price with no surprises:</strong> the quote agreed before starting is what you pay. Parts are billed separately with receipts.
+          </span>
+          <span class="font-bold text-blue-700 bg-blue-50 border border-blue-200/80 px-3.5 py-1.5 rounded-full whitespace-nowrap">
+            Official invoice with NIF included
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL APARTMENT & VILLA RENOVATIONS -->
+    <section id="renovation" class="py-16 md:py-20 bg-gradient-to-b from-sky-50/60 via-blue-50/30 to-white border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="relative overflow-hidden rounded-3xl bg-white border border-blue-100 shadow-sm p-7 sm:p-10 lg:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div class="lg:col-span-7">
+              <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                Renovations & Full Repiping
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 leading-tight">
+                Renovating all the plumbing in your apartment or villa?
+              </h2>
+              <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
+                Alongside everyday repairs, we carry out complete water supply and drainage replacements for apartment and villa renovations (T1, T2, T3 or larger) in Tavira and the surrounding area — from first-fix pipework to final fixture installation.
+              </p>
+
+              <ul class="mt-6 space-y-3 text-sm text-slate-700">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+                  </span>
+                  <span><strong class="text-slate-900">New PEX or Multilayer piping:</strong> complete cold, hot, and waste pipework using certified materials.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+                  </span>
+                  <span><strong class="text-slate-900">Bathrooms, kitchens & utility rooms:</strong> water points, drains, water heaters, and final fitting of taps and toilets.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 stroke-[2.8]" />
+                  </span>
+                  <span><strong class="text-slate-900">Pressure-tested before closing walls:</strong> strict leak testing, clear timelines, and a written quote.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl bg-slate-50 border border-slate-200/90 p-6 sm:p-7">
+                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">
+                  <Calculator className="w-3.5 h-3.5" />
+                  Online Estimate
+                </div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mt-3">
+                  Estimate your renovation plumbing cost
+                </h3>
+                <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                  Select your property layout (T1, T2 or T3), pipe type, and water points in our calculator for an instant reference estimate.
+                </p>
+
+                <div class="mt-6 flex flex-col gap-3">
+                  <a
+                    href="/en/calculators/renovation-plumbing/"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm sm:text-base shadow-md shadow-blue-600/20 hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <Calculator className="w-4 h-4" />
+                    Open Cost Calculator →
+                  </a>
+                  <a
+                    href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20quote%20for%20a%20plumbing%20renovation%20in%20Tavira"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white hover:bg-emerald-50/60 text-slate-800 hover:text-emerald-700 font-bold text-sm border border-slate-300 hover:border-emerald-300 transition-all duration-200"
+                  >
+                    Book a Site Visit on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="about" class="py-20 md:py-24 bg-slate-50/80 border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            The Karpov Promise
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Why homeowners trust our team</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
+            We know calling a tradesperson to your home can feel uncertain. Here is how we remove the usual headaches:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <Clock className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Strict Punctuality</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We respect your time. If we book 10:00, we arrive at 10:00. If unexpected traffic delays us, we message you 30 minutes ahead.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <Receipt className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Zero Bill Surprises</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We diagnose the fault, explain the options, and confirm the exact price with you before picking up a single tool.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <Sparkles className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Clean & Careful Work</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We use shoe covers and protective cloths, leave the workspace spotless, and take old parts away for recycling.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <FileText className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Official Invoice with NIF</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Every job comes with an official Portuguese invoice for IRS tax records and a formal workmanship warranty.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <Wrench className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Stocked Van</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We carry the most common replacement parts (fill valves, cartridges, flexi hoses, seals) to finish most repairs in one visit.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <div class="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <Languages className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">We Communicate in EN & PT</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We communicate in practical English and Portuguese. Even if our spoken English is simple, sending a photo or message on WhatsApp makes everything crystal clear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREAS -->
+    <section id="areas" class="py-20 md:py-24 bg-white border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Service Coverage
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Where We Work From Tavira</h2>
+          <p class="text-slate-600 mt-3.5 text-sm sm:text-base leading-relaxed">
+            Based in Tavira, we quickly cover the entire municipality and neighbouring towns within a 30–40 km radius:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 text-sm font-semibold text-slate-700">
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Tavira Centre</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Santa Luzia</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Cabanas de Tavira</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Conceição</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Luz de Tavira</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Santo Estêvão</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Olhão & Fuseta</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>Faro & Montenegro</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>VRSA & Monte Gordo</span>
+          </div>
+          <div class="geo-pill p-4 rounded-xl bg-slate-50/80 hover:bg-blue-50/40 border border-slate-200/90 hover:border-blue-300 flex items-center justify-center gap-2">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>São Brás de Alportel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 md:py-24 bg-slate-50/80">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-1.5 text-blue-600 font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Common Questions
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Do you charge a call-out fee in Tavira?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              For repairs carried out by us in Tavira and nearby parishes, travel is included in the quote agreed before work starts. If you only need a diagnostic visit without going ahead with the repair, a flat €25 fee applies.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Do you issue an official invoice with NIF?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Yes, always. We issue an official fatura-recibo with your NIF reported to the Portuguese Tax Authority. This gives you a formal workmanship warranty and counts toward eligible home maintenance IRS deductions.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">Can I write to you in English?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Yes, of course! You are welcome to write in English or Portuguese. Sending a photo or written message on WhatsApp is the easiest way to make sure every detail is clear before we arrive.
+            </p>
+          </div>
+
+          <div class="feature-card p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-200">
+            <h3 class="font-bold text-base sm:text-lg text-slate-900">What payment methods do you accept?</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              We accept MBWay, instant bank transfer, or cash right after the job is completed and tested.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BANNER WITH SUBTLE WATER WAVE -->
+    <section class="relative pt-20 pb-20 md:pt-24 md:pb-24 bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white text-center">
+      <!-- Animated water surface (sits right above the blue block) -->
+      <div class="water-surface absolute left-0 right-0 bottom-full -mb-px overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+        <svg class="water-wave water-wave-back" viewBox="0 0 1440 40" preserveAspectRatio="none" fill="none">
+          <path d="M0,20 C120,4 240,4 360,20 S600,36 720,20 S960,4 1080,20 S1320,36 1440,20 V40 H0 Z" fill="#1d4ed8" fill-opacity="0.35" />
+        </svg>
+        <svg class="water-wave water-wave-front" viewBox="0 0 1440 40" preserveAspectRatio="none" fill="none">
+          <path d="M0,24 C120,8 240,8 360,24 S600,40 720,24 S960,8 1080,24 S1320,40 1440,24 V40 H0 Z" fill="#1d4ed8" />
+        </svg>
+      </div>
+
+      <!-- Subtle Water Ripple Rings in Background -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-sky-300/10"></div>
+        <div class="absolute -right-16 -top-16 w-72 h-72 rounded-full border border-sky-300/10"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
+          Have a leak or plumbing issue in Tavira?
+        </h2>
+        <p class="text-blue-100/90 text-base sm:text-lg mb-9 max-w-2xl mx-auto leading-relaxed">
+          Send us a WhatsApp message with a photo or short description. We reply within minutes with a quote and availability.
+        </p>
+        <div class="flex items-center justify-center">
+          <a
+            href="https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20plumber%20in%20Tavira"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold text-base shadow-lg shadow-emerald-950/25 hover:-translate-y-0.5 transition-all duration-200 active:scale-95"
+          >
+            Chat on WhatsApp Now
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

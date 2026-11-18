@@ -1,0 +1,81 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import CalculadoraRemodelacao from '../../../components/CalculadoraRemodelacao';
+
+const title = 'Calculator: Plumbing Cost for T1, T2 & T3 Properties | Karpov';
+const description =
+  'Estimate the plumbing cost for your apartment or villa (1–3 bedrooms) in PEX or multilayer pipe. Select water points, complexity, and extras.';
+
+const wa =
+  'https://wa.me/351912224291?text=Hello%20Karpov,%20I%20would%20like%20to%20request%20a%20plumbing%20estimate';
+
+const steps = [
+  ['Choose the property', 'Apartment or house/villa and layout (T1, T2 or T3).'],
+  ['Choose the pipe material', 'PEX (more economical) or multilayer (PEX-AL-PEX).'],
+  ['Select scope & access', 'New installation or renovation, plus access complexity.'],
+  ['Set water points', 'Toilets, sinks, showers, kitchen, washing machine, dishwasher, utility room.'],
+  ['View your estimate', 'The price updates live. Send the summary to WhatsApp in one click.'],
+];
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white pt-12 pb-8 md:pt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <nav class="text-sm text-slate-500 mb-6">
+          <a href="/en/" class="hover:text-blue-600">Home</a> /
+          <a href="/en/calculators/" class="hover:text-blue-600">Calculators</a>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+          Plumbing cost calculator for T1, T2 & T3 properties
+        </h1>
+        <p class="text-slate-600 mt-3 text-lg max-w-2xl">
+          Find out in a few clicks what the plumbing installation or renovation for your apartment or villa might cost.
+        </p>
+
+        <div class="mt-8 rounded-2xl bg-white border border-slate-200 p-5 sm:p-6">
+          <h2 class="text-xl font-bold text-slate-900">How to use the calculator</h2>
+          <ol class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {steps.map(([t, d], i) => (
+              <li class="flex gap-3">
+                <span class="shrink-0 w-7 h-7 rounded-full bg-blue-50 border border-blue-100 text-blue-700 font-bold text-sm flex items-center justify-center">{i + 1}</span>
+                <span class="text-sm text-slate-600"><strong class="block text-slate-900">{t}</strong>{d}</span>
+              </li>
+            ))}
+          </ol>
+          <p class="text-sm text-slate-500 mt-4">
+            Tip: count fixtures across <strong>all</strong> bathrooms and guest WCs. If you are unsure about any
+            option, pick the closest match — we will confirm everything in the final quote.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+      <CalculadoraRemodelacao lang="en" client:load />
+
+      <div class="mt-8 p-5 rounded-2xl bg-amber-50 border border-amber-200 text-sm text-slate-700 leading-relaxed">
+        <strong>Important:</strong> the figures shown are <strong>indicative reference estimates</strong> and
+        <strong>do not constitute a binding offer</strong>. The final price depends on an on-site inspection,
+        the condition of existing pipework, and chosen materials. Contact us on WhatsApp for an exact quote.
+      </div>
+
+      <div class="mt-6 text-center">
+        <a
+          href={wa}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-sm transition"
+        >
+          Request exact quote on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

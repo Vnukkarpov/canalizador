@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const posts = [
+  {
+    href: '/en/blog/plumber-prices-tavira/',
+    tag: 'Prices & quotes',
+    title: 'How much does a plumber cost in Tavira? 2026 reference prices',
+    excerpt:
+      'Hourly rates, call-out fees, emergency rates, 6% VAT rules in Portugal, and a price table for common repairs.',
+    date: '16 November 2026',
+  },
+];
+---
+
+<Layout
+  title="Blog | Plumbing Guides in Tavira & the Algarve | Karpov"
+  description="Practical plumbing guides: local prices, common faults, and home maintenance tips in the Algarve."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="bg-gradient-to-b from-sky-50/70 via-blue-50/30 to-white py-14 md:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Karpov Blog</h1>
+        <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
+          Practical guides on plumbing prices, common issues, and home maintenance in Tavira and the Algarve.
+        </p>
+
+        <div class="mt-10 space-y-4">
+          {posts.map((p) => (
+            <a href={p.href} class="block rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition p-6">
+              <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">{p.tag}</span>
+              <h2 class="text-xl font-bold text-slate-900 mt-2">{p.title}</h2>
+              <p class="text-slate-600 mt-2">{p.excerpt}</p>
+              <p class="text-sm text-slate-500 mt-3">{p.date}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

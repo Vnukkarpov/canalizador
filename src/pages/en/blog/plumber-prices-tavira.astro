@@ -1,0 +1,235 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const title = 'How Much Does a Plumber Cost in Tavira? 2026 Prices | Karpov';
+const description =
+  'Plumber prices in Tavira in 2026: common repair rates, call-out fees, 6% VAT rules in Portugal, and how to avoid unexpected extras.';
+const published = '2026-11-16';
+
+const faq = [
+  {
+    q: 'How much does a plumber charge per hour in Tavira?',
+    a: 'It depends on the job: €25 to €45/hour for straightforward scheduled repairs (taps, traps, toilets), €45 to €80/hour for complex diagnostics, pipe joining/soldering and water heater installation, and €60 to €90+ for emergency call-outs (nights, weekends, public holidays). Prices exclude VAT.',
+  },
+  {
+    q: 'How much is a plumber call-out fee?',
+    a: 'Typically €25 to €50 during normal working hours. For emergency call-outs (nights, weekends, holidays), the fixed call-out or first-hour fee is usually €80 to €150. Often it is waived or included if you proceed with the repair. At Karpov, the €25 visit fee is only charged if you request a diagnosis and decide not to go ahead.',
+  },
+  {
+    q: 'What VAT rate applies to plumbing repairs in Portugal?',
+    a: 'For repair, renovation, and restoration of residential properties (houses and apartments), the reduced 6% VAT rate applies (Verba 2.27 of Lista I of CIVA), provided materials do not exceed 20% of the total invoice. If materials exceed 20%, labour remains at 6% and materials are billed on a separate line at 23%. Always confirm this before accepting a quote.',
+  },
+  {
+    q: 'Can I request an official invoice with my NIF?',
+    a: 'You should always ask for one. An official invoice with your NIF protects your consumer rights and workmanship warranty, and certain home expenses may be relevant for Portuguese tax (IRS) deductions.',
+  },
+  {
+    q: 'Are prices the same in summer and winter?',
+    a: 'Base rates stay the same, though in summer demand in Tavira, Cabanas and Santa Luzia is higher, so non-urgent bookings can take longer. Out-of-hours emergencies carry a surcharge.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'How much does a plumber cost in Tavira? 2026 reference prices',
+    description,
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'en',
+    author: { '@type': 'Organization', name: 'Karpov' },
+    publisher: { '@type': 'Organization', name: 'Karpov', url: 'https://karpov.pt' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+
+const prices = [
+  ['Toilet cistern repair', 'Fill valve, flush mechanism or seal', 'from €45', '45–60 min'],
+  ['Tap / mixer replacement', 'Remove old tap, fit new one & flexi hoses', 'from €40', '45 min'],
+  ['Water heater replacement', 'Remove old unit, mount new one, plumbing & test', 'from €95', '1h30–2h'],
+  ['Simple drain unblocking (trap / gully)', 'Disassembly, cleaning & mechanical clearing', 'from €50', '45 min'],
+  ['Washing machine connection', 'Water & drain hook-up, levelling and test', 'from €35', '30–45 min'],
+  ['Anti-limescale filter', 'Installation of limescale protection system', 'from €65', '1 hour'],
+];
+
+const wa =
+  'https://wa.me/351912224291?text=Hello%20Karpov,%20I%20would%20like%20a%20plumbing%20quote%20in%20Tavira';
+---
+
+<Layout title={title} description={description} schema={schema as any}>
+  <Header />
+
+  <main class="flex-grow">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <nav class="text-sm text-slate-500 mb-6">
+        <a href="/en/" class="hover:text-blue-600">Home</a> /
+        <a href="/en/blog/" class="hover:text-blue-600">Blog</a>
+      </nav>
+
+      <p class="text-blue-600 font-bold text-xs uppercase tracking-widest">Prices & quotes</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 leading-tight">
+        How much does a plumber cost in Tavira? 2026 reference prices
+      </h1>
+      <p class="text-sm text-slate-500 mt-3">
+        By Karpov · Published <time datetime={published}>16 November 2026</time>
+      </p>
+
+      <div class="mt-8 p-5 rounded-2xl bg-blue-50 border border-blue-100 text-slate-800 leading-relaxed">
+        <strong>Quick answer:</strong> in Tavira, a simple plumbing repair (cistern, tap, trap) usually costs
+        between <strong>€35 and €90</strong>, excluding VAT. Labour ranges from <strong>€25–€45/hour</strong> for
+        routine jobs and <strong>€45–€80/hour</strong> for complex work, rising to <strong>€60–€90+</strong> for
+        emergencies. Call-out fees are around <strong>€25–€50</strong>. Replacing a water heater starts near
+        <strong>€95</strong> for labour. For residential properties, VAT is <strong>6%</strong> if materials are up
+        to 20% of the invoice.
+      </div>
+
+      <div class="mt-10 space-y-5 text-slate-700 leading-relaxed text-[17px]">
+        <p>
+          Calling a plumber without knowing what to expect on the bill is a common worry for homeowners and expats
+          in Tavira, Cabanas, and Santa Luzia. Here is how plumbing prices are structured, what is usually included,
+          and how to get a clear quote with no surprises.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Price table for common repairs</h2>
+        <p>
+          The figures below are indicative, <strong>excluding VAT</strong> (6% for residential repairs under the
+          conditions explained below), and exclude replacement parts unless stated. Final pricing depends on
+          installation condition and access.
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="px-4 py-3 font-bold">Service</th>
+                <th class="px-4 py-3 font-bold">What is included</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Indicative price</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Duration</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              {prices.map(([s, i, p, t]) => (
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-slate-900">{s}</td>
+                  <td class="px-4 py-3">{i}</td>
+                  <td class="px-4 py-3 whitespace-nowrap font-bold text-blue-700">{p}</td>
+                  <td class="px-4 py-3 whitespace-nowrap">{t}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">How a plumber's quote is calculated</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Call-out fee:</strong> covers travel time and fuel to your property, typically €25 to €50.</li>
+          <li><strong>Labour:</strong> hourly (see table below) or fixed price per job. For routine repairs, a fixed price is clearer.</li>
+          <li><strong>Materials:</strong> valves, cartridges, flexi hoses, seals, or new appliances. Ask for parts to be itemised separately.</li>
+          <li><strong>Urgency:</strong> evening, weekend, and public holiday call-outs carry higher rates.</li>
+          <li><strong>VAT (IVA):</strong> 6% on residential repairs and renovations, subject to the materials threshold below.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Hourly rates in Tavira</h2>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="px-4 py-3 font-bold">Type of work</th>
+                <th class="px-4 py-3 font-bold whitespace-nowrap">Hourly rate (excl. VAT)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-4 py-3">Scheduled weekday jobs (taps, traps, toilets)</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">€25 – €45</td></tr>
+              <tr><td class="px-4 py-3">Complex diagnostics, pipe joining/soldering, water heater installation</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">€45 – €80</td></tr>
+              <tr><td class="px-4 py-3">Emergencies (nights, weekends, public holidays)</td><td class="px-4 py-3 font-bold text-blue-700 whitespace-nowrap">€60 – €90+</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          For emergency call-outs, a fixed minimum charge for the visit or first hour is common, typically
+          <strong>€80 to €150</strong>.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">What VAT applies to plumbing repairs?</h2>
+        <p>
+          For repair, renovation, and restoration work on <strong>residential properties</strong> (houses and
+          apartments), the <strong>reduced 6% VAT rate</strong> applies (Verba 2.27 of Lista I of CIVA), with one
+          condition:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Materials up to 20% of the invoice total:</strong> the entire invoice is taxed at 6%.</li>
+          <li><strong>Materials over 20%:</strong> labour is taxed at 6% and materials are listed separately at 23%.</li>
+        </ul>
+        <p>Always ask for an invoice showing labour and materials itemised separately.</p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Hourly rate or fixed price?</h2>
+        <p>
+          An hourly rate can look cheaper at first, but the final bill depends on how long the job takes. A
+          <strong>fixed price</strong> gives you certainty: you know the total cost before work starts, and any
+          unexpected complication must be agreed with you first.
+        </p>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">Warning signs of an unfair quote</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Refusing to give a price or estimate before starting work.</li>
+          <li>Not issuing an official invoice, or only offering one "if you ask".</li>
+          <li>Suspiciously low initial quote followed by unexpected add-ons on site.</li>
+          <li>Not separating parts and labour costs.</li>
+          <li>No written warranty on workmanship.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-slate-900 pt-4">How to save on your plumbing bill</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Send photos of the issue via WhatsApp so we can estimate accurately and bring the right parts.</li>
+          <li>Group several small tasks into a single visit to pay the call-out fee only once.</li>
+          <li>Avoid out-of-hours call-outs when safe: shut off the main stopcock and book for the next morning.</li>
+          <li>Water in Tavira is hard: an anti-limescale filter protects your water heater and prevents breakdowns.</li>
+        </ul>
+      </div>
+
+      <div class="mt-12 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm text-center">
+        <h2 class="text-xl font-bold text-slate-900">Need a quote in Tavira?</h2>
+        <p class="text-slate-600 mt-2">
+          Describe the issue and send a photo. We reply with an estimate before starting any work.
+        </p>
+        <a
+          href={wa}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex mt-5 items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-sm transition"
+        >
+          Request quote on WhatsApp
+        </a>
+      </div>
+
+      <section class="mt-14">
+        <h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+        <div class="mt-5 space-y-3">
+          {faq.map((f) => (
+            <details class="group rounded-xl bg-white border border-slate-200 p-4">
+              <summary class="cursor-pointer font-semibold text-slate-900">{f.q}</summary>
+              <p class="mt-3 text-slate-700 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <p class="mt-10 text-xs text-slate-500">
+        Prices are indicative and may vary depending on the job. Last updated: November 2026.
+      </p>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,26 +1,68 @@
 ---
-const path = Astro.url.pathname;
+import { getLocaleFromUrl, getLocalizedPath, type Locale } from '../i18n/utils';
 
-const navItems = [
-  { label: 'Serviços & Preços', href: '/#servicos' },
-  { label: 'Zonas de Atuação', href: '/#zonas' },
-  { label: 'Porquê Nós', href: '/#sobre' },
-  { label: 'Calculadoras', href: '/calculadoras/', section: '/calculadoras' },
-  { label: 'Blog', href: '/blog/', section: '/blog' },
-  { label: 'FAQ', href: '/#faq' },
-];
+const path = Astro.url.pathname;
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const homeHref = locale === 'pt' ? '/' : '/en/';
+
+const ptSwitchHref = getLocalizedPath(path, 'pt');
+const enSwitchHref = getLocalizedPath(path, 'en');
+
+const navItems =
+  locale === 'pt'
+    ? [
+        { label: 'Serviços & Preços', href: '/#servicos' },
+        { label: 'Zonas de Atuação', href: '/#zonas' },
+        { label: 'Porquê Nós', href: '/#sobre' },
+        { label: 'Calculadoras', href: '/calculadoras/', section: '/calculadoras' },
+        { label: 'Blog', href: '/blog/', section: '/blog' },
+        { label: 'FAQ', href: '/#faq' },
+      ]
+    : [
+        { label: 'Services & Prices', href: '/en/#services' },
+        { label: 'Service Areas', href: '/en/#areas' },
+        { label: 'Why Us', href: '/en/#about' },
+        { label: 'Calculators', href: '/en/calculators/', section: '/en/calculators' },
+        { label: 'Blog', href: '/en/blog/', section: '/en/blog' },
+        { label: 'FAQ', href: '/en/#faq' },
+      ];
 
 const isActive = (item: { section?: string }) =>
   !!item.section && path.startsWith(item.section);
 
 const whatsappUrl =
-  'https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira';
+  locale === 'pt'
+    ? 'https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira'
+    : 'https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20plumber%20in%20Tavira';
+
+const t =
+  locale === 'pt'
+    ? {
+        homeAria: 'Karpov Canalização, página inicial',
+        subtitle: 'Canalização',
+        navAria: 'Navegação principal',
+        mobileNavAria: 'Navegação móvel',
+        whatsappCta: 'Orçamento via WhatsApp',
+        menuOpen: 'Abrir menu',
+        menuClose: 'Fechar menu',
+        langAria: 'Mudar idioma',
+      }
+    : {
+        homeAria: 'Karpov Plumbing, homepage',
+        subtitle: 'Plumbing',
+        navAria: 'Main navigation',
+        mobileNavAria: 'Mobile navigation',
+        whatsappCta: 'Quote via WhatsApp',
+        menuOpen: 'Open menu',
+        menuClose: 'Close menu',
+        langAria: 'Switch language',
+      };
 ---
 
 <header id="site-header" class="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-slate-200/80 transition-all">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
     <!-- Brand -->
-    <a href="/" class="group flex items-center gap-2.5 shrink-0" aria-label="Karpov Canalização, página inicial">
+    <a href={homeHref} class="group flex items-center gap-2.5 shrink-0" aria-label={t.homeAria}>
       <div>
         <div class="brand-word font-display font-extrabold text-2xl tracking-tight text-slate-900 flex items-baseline" aria-label="Karpov">
           <span aria-hidden="true">KARP</span><span class="brand-drop" aria-hidden="true"><svg viewBox="0 0 24 28" fill="none">
@@ -34,12 +76,12 @@ const whatsappUrl =
               <path class="brand-drop-shine" d="M6.3 17.6a5.9 5.9 0 0 0 4.3 5.4" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" />
             </svg></span><span aria-hidden="true">V</span>
         </div>
-        <p class="text-[10.5px] text-slate-500 font-semibold tracking-[0.14em] uppercase">Canalização</p>
+        <p class="text-[10.5px] text-slate-500 font-semibold tracking-[0.14em] uppercase">{t.subtitle}</p>
       </div>
     </a>
 
     <!-- Desktop navigation -->
-    <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600" aria-label="Navegação principal">
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600" aria-label={t.navAria}>
       {navItems.map((item) => (
         <a
           href={item.href}
@@ -54,7 +96,39 @@ const whatsappUrl =
       ))}
     </nav>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2.5 sm:gap-3">
+      <!-- Language switcher (real links for SEO) -->
+      <nav aria-label={t.langAria} class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 p-0.5 text-xs font-bold">
+        <a
+          href={ptSwitchHref}
+          hreflang="pt-PT"
+          lang="pt-PT"
+          aria-current={locale === 'pt' ? 'page' : undefined}
+          class:list={[
+            'px-2.5 py-1.5 rounded-lg transition-colors',
+            locale === 'pt'
+              ? 'bg-white text-blue-600 shadow-xs'
+              : 'text-slate-500 hover:text-slate-800',
+          ]}
+        >
+          PT
+        </a>
+        <a
+          href={enSwitchHref}
+          hreflang="en"
+          lang="en"
+          aria-current={locale === 'en' ? 'page' : undefined}
+          class:list={[
+            'px-2.5 py-1.5 rounded-lg transition-colors',
+            locale === 'en'
+              ? 'bg-white text-blue-600 shadow-xs'
+              : 'text-slate-500 hover:text-slate-800',
+          ]}
+        >
+          EN
+        </a>
+      </nav>
+
       <!-- WhatsApp button (hidden on small screens: sticky button is at the bottom) -->
       <a
         href={whatsappUrl}
@@ -66,7 +140,7 @@ const whatsappUrl =
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
         </span>
-        Orçamento via WhatsApp
+        {t.whatsappCta}
       </a>
 
       <!-- Mobile menu button -->
@@ -74,7 +148,9 @@ const whatsappUrl =
         id="menu-toggle"
         type="button"
         class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200 bg-white text-slate-700 hover:text-blue-600 hover:border-blue-300 transition active:scale-95"
-        aria-label="Abrir menu"
+        aria-label={t.menuOpen}
+        data-label-open={t.menuOpen}
+        data-label-close={t.menuClose}
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
@@ -90,7 +166,7 @@ const whatsappUrl =
 
   <!-- Mobile menu panel -->
   <div id="mobile-menu" class="mobile-menu lg:hidden" hidden>
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 pb-6 pt-2 flex flex-col" aria-label="Navegação móvel">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 pb-6 pt-2 flex flex-col" aria-label={t.mobileNavAria}>
       {navItems.map((item) => (
         <a
           href={item.href}
@@ -112,7 +188,7 @@ const whatsappUrl =
         rel="noopener noreferrer"
         class="mt-5 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-sm transition active:scale-[0.98]"
       >
-        Orçamento via WhatsApp
+        {t.whatsappCta}
       </a>
     </nav>
   </div>
@@ -126,8 +202,10 @@ const whatsappUrl =
 
   function setOpen(open: boolean) {
     if (!toggle || !menu) return;
+    const openLabel = toggle.getAttribute('data-label-open') ?? 'Abrir menu';
+    const closeLabel = toggle.getAttribute('data-label-close') ?? 'Fechar menu';
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    toggle.setAttribute('aria-label', open ? closeLabel : openLabel);
     iconOpen?.classList.toggle('hidden', open);
     iconClose?.classList.toggle('hidden', !open);
     menu.hidden = !open;

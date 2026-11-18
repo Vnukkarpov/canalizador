@@ -1,5 +1,11 @@
 ---
 import '../styles/global.css';
+import {
+  getAlternatePaths,
+  getLocaleFromUrl,
+  normalizePath,
+  type Locale,
+} from '../i18n/utils';
 
 interface Props {
   title: string;
@@ -7,21 +13,50 @@ interface Props {
   schema?: Record<string, any>;
   canonicalUrl?: string;
   noindex?: boolean;
+  lang?: Locale;
 }
 
-const { 
-  title, 
-  description, 
+const locale: Locale = Astro.props.lang ?? getLocaleFromUrl(Astro.url);
+const siteOrigin = Astro.site ?? new URL('https://karpov.pt');
+const defaultCanonical = new URL(normalizePath(Astro.url.pathname), siteOrigin).href;
+
+const {
+  title,
+  description,
   schema,
-  canonicalUrl = Astro.url.href,
-  noindex = false
+  canonicalUrl = defaultCanonical,
+  noindex = false,
 } = Astro.props;
+
+const alternatePaths = getAlternatePaths(Astro.url.pathname);
+const ptAlternateUrl = alternatePaths
+  ? new URL(alternatePaths.pt, siteOrigin).href
+  : null;
+const enAlternateUrl = alternatePaths
+  ? new URL(alternatePaths.en, siteOrigin).href
+  : null;
+
+const htmlLang = locale === 'pt' ? 'pt-PT' : 'en';
+const ogLocale = locale === 'pt' ? 'pt_PT' : 'en_GB';
+const ogAlternateLocale = locale === 'pt' ? 'en_GB' : 'pt_PT';
+
+const whatsappHref =
+  locale === 'pt'
+    ? 'https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira'
+    : 'https://wa.me/351912224291?text=Hello%20Karpov,%20I%20need%20a%20plumber%20in%20Tavira';
+const whatsappLabel =
+  locale === 'pt'
+    ? 'WhatsApp: Falar com Canalizador'
+    : 'WhatsApp: Talk to a Plumber';
 
 // LocalBusiness Schema for Karpov in Tavira
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "PlumbingService",
-  "name": "Karpov — Canalizador em Tavira e Arredores",
+  "name":
+    locale === 'pt'
+      ? "Karpov — Canalizador em Tavira e Arredores"
+      : "Karpov — Plumber in Tavira & Algarve",
   "image": "https://karpov.pt/og-image.jpg",
   "url": "https://karpov.pt",
   "telephone": "+351912224291",
@@ -61,7 +96,7 @@ const localBusinessSchema = {
 ---
 
 <!doctype html>
-<html lang="pt-PT" class="scroll-smooth">
+<html lang={htmlLang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -76,6 +111,13 @@ const localBusinessSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {ptAlternateUrl && enAlternateUrl && (
+      <>
+        <link rel="alternate" hreflang="pt-PT" href={ptAlternateUrl} />
+        <link rel="alternate" hreflang="en" href={enAlternateUrl} />
+        <link rel="alternate" hreflang="x-default" href={ptAlternateUrl} />
+      </>
+    )}
     {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Open Graph / Social -->
@@ -83,7 +125,8 @@ const localBusinessSchema = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogAlternateLocale} />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
@@ -97,7 +140,7 @@ const localBusinessSchema = {
     <!-- Sticky Mobile WhatsApp Button -->
     <div class="fixed bottom-4 left-4 right-4 md:hidden z-50">
       <a 
-        href="https://wa.me/351912224291?text=Olá%20Karpov,%20preciso%20de%20um%20canalizador%20em%20Tavira" 
+        href={whatsappHref} 
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center justify-center gap-2 w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base rounded-xl shadow-xl transition-all active:scale-[0.98]"
@@ -106,7 +149,7 @@ const localBusinessSchema = {
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
         </span>
-        WhatsApp: Falar com Canalizador
+        {whatsappLabel}
       </a>
     </div>
   </body>
