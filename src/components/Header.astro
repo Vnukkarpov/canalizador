@@ -1,6 +1,5 @@
 ---
 import { getLocaleFromUrl, getLocalizedPath, type Locale } from '../i18n/utils';
-import Logo from './Logo.astro';
 
 const path = Astro.url.pathname;
 const locale: Locale = getLocaleFromUrl(Astro.url);
@@ -65,7 +64,9 @@ const t =
     <!-- Brand -->
     <a href={homeHref} class="group flex items-center gap-2.5 shrink-0" aria-label={t.homeAria}>
       <div>
-        <Logo class="h-7 w-auto text-[#2d3440]" accentClass="text-blue-600" />
+        <div class="brand-word font-display font-extrabold text-2xl tracking-tight text-[#2d3440] flex items-baseline" aria-label="Karpov.pt">
+          <span aria-hidden="true">Karp</span><span class="text-blue-600" aria-hidden="true">o</span><span aria-hidden="true">v.pt</span>
+        </div>
         <p class="text-[10.5px] text-slate-500 font-semibold tracking-[0.14em] uppercase">{t.subtitle}</p>
       </div>
     </a>
